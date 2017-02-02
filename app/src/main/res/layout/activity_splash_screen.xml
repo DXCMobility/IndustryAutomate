@@ -4,11 +4,14 @@
     android:id="@+id/activity_splash_screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="example.com.industrialautomation.SplashScreen">
+    android:background="@drawable/splash"
+    tools:context="example.com.industrialautomation.activities.SplashScreen">
     
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="145dp"
+        android:src="@drawable/icon"
         />
 
     
