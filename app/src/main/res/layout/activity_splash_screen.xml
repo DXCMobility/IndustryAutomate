@@ -13,7 +13,15 @@
         android:layout_marginLeft="145dp"
         android:src="@drawable/icon"
         />
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="58dp"/>
 
-    
+
+
 
 </RelativeLayout>
