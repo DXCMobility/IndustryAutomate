@@ -111,6 +111,15 @@
               android:textColor="#fff"
               android:textAppearance="?android:textAppearanceMedium"
               />
+          <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:src="@drawable/ic_keyboard_arrow_right_white_24dp"
+              android:id="@+id/right_arrow"
+              android:layout_alignParentRight="true"
+              android:layout_below="@+id/dotline"
+              android:layout_marginRight="15dp"
+              android:layout_marginTop="20dp"/>
 
       </RelativeLayout>
 
