@@ -5,20 +5,31 @@ package models;
  */
 
 public class FactoryDashboard {
+    private String factory;
     private String status;
     private String power_consumption;
     private String temp;
     private String humidity;
 
-    public FactoryDashboard(String status, String power_consumption, String temp, String humidity) {
+    public FactoryDashboard(String factory,String status, String power_consumption, String temp, String humidity) {
+        this.factory=factory;
         this.status = status;
         this.power_consumption = power_consumption;
         this.temp = temp;
         this.humidity = humidity;
     }
 
+    public  String getFactory()
+    {
+        return factory;
+    }
     public String getStatus() {
         return status;
+    }
+
+    public void setFactory(String factory)
+    {
+        this.factory=factory;
     }
 
     public void setStatus(String status) {

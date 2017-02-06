@@ -42,6 +42,7 @@ public class FactoryDashboardAdapter extends RecyclerView.Adapter<FactoryDashboa
 
     @Override
     public void onBindViewHolder(final FactoryViewHolder holder, int position) {
+        holder.factory.setText(factoryDashboards.get(position).getFactory());
         holder.status.setText(factoryDashboards.get(position).getStatus());
         holder.power_consumption.setText(factoryDashboards.get(position).getPower_consumption());
         holder.temp.setText(factoryDashboards.get(position).getTemp());
@@ -86,12 +87,13 @@ public class FactoryDashboardAdapter extends RecyclerView.Adapter<FactoryDashboa
 
     public static class FactoryViewHolder extends RecyclerView.ViewHolder {
         CardView cv;
-        TextView status,power_consumption,temp,humidity;
+        TextView status,power_consumption,temp,humidity,factory;
         LinearLayout linearDetail,linearRealDevices;
 
         FactoryViewHolder(View itemView) {
             super(itemView);
             cv = (CardView)itemView.findViewById(R.id.factoryCard);
+            factory=(TextView)itemView.findViewById(R.id.cardFactory);
             status = (TextView)itemView.findViewById(R.id.tvFactoryStatus);
             power_consumption = (TextView)itemView.findViewById(R.id.tvPowerConsumption);
             temp = (TextView)itemView.findViewById(R.id.tvTemp);

@@ -5,7 +5,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
 
     <RelativeLayout
@@ -13,7 +14,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/relative"
         android:layout_width="match_parent" android:layout_height="100dp"
-        android:background="#000000"
+        android:background="#01a982"
         >
 
         <TextView
@@ -49,9 +50,10 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_factory1"
         android:layout_width="match_parent"
-        android:layout_height="545dp"
+        android:layout_height="match_parent"
         android:layout_marginTop="105dp"
-        android:layout_below="@id/relative">
+        android:layout_below="@id/relative"
+        android:background="#425563">
 
     </android.support.v7.widget.RecyclerView>
 
