@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                         fragmentTransaction = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction.replace(R.id.main_container,new DeviceStatus());
                         fragmentTransaction.commit();
-                        getSupportActionBar().setTitle("DeviceStatus");
+                        getSupportActionBar().setTitle("DeviceStatusModel");
                         item.setChecked(true);
                         drawerlayout.closeDrawers();
                         break;
