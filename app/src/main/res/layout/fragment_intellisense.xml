@@ -53,12 +53,13 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:text="INTELLISENSE"
-            android:textSize="15dp"
+            android:textAppearance="?android:textAppearanceMedium"
             android:textStyle="bold"
             android:id="@+id/intelli_id"
             android:textColor="#FFFFFF"
             android:gravity="center"
             android:layout_below="@id/optiText"
+
             />
 
         <RelativeLayout
@@ -68,16 +69,22 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
             android:id="@+id/intelliReduce_txt"
             android:text="@string/intellisense_reduce"
+            android:textAppearance="?android:textAppearanceMedium"
 
             />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/intelliOpti_text"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
                 android:text="@string/intellisense_opti"
                 android:layout_below="@id/intelliReduce_txt"
+                android:textAppearance="?android:textAppearanceMedium"
 
                 />
         </RelativeLayout>
