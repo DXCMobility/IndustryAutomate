@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Switch;
 
 
 /**
@@ -13,7 +14,7 @@ import android.view.ViewGroup;
  */
 public class Settings extends Fragment {
 
-
+    Switch mSwitch;
     public Settings() {
         // Required empty public constructor
     }

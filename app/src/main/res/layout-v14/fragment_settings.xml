@@ -103,23 +103,66 @@
               android:layout_alignEnd="@+id/switchbutton3" />
 
           <TextView
+              android:id="@+id/privacy"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text="Privacy"
               android:layout_below="@+id/dotline"
               android:layout_marginTop="20dp"
-              android:textColor="#fff"
+              android:text="Privacy"
               android:textAppearance="?android:textAppearanceMedium"
-              />
+              android:textColor="#fff" />
+
           <ImageView
+              android:id="@+id/right_arrow"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:src="@drawable/ic_keyboard_arrow_right_white_24dp"
-              android:id="@+id/right_arrow"
               android:layout_alignParentRight="true"
               android:layout_below="@+id/dotline"
               android:layout_marginRight="15dp"
-              android:layout_marginTop="20dp"/>
+              android:layout_marginTop="20dp"
+              android:src="@drawable/ic_keyboard_arrow_right_white_24dp" />
+
+          <TextView
+              android:id="@+id/aboutus"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/privacy"
+              android:layout_marginTop="15dp"
+              android:text="About Us"
+              android:textAppearance="?android:textAppearanceMedium"
+              android:textColor="#fff" />
+
+          <ImageView
+              android:id="@+id/right_arrow1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true"
+              android:layout_below="@+id/right_arrow"
+              android:layout_marginRight="15dp"
+              android:layout_marginTop="20dp"
+              android:src="@drawable/ic_keyboard_arrow_right_white_24dp" />
+
+          <TextView
+              android:id="@+id/profile"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/aboutus"
+              android:layout_marginTop="15dp"
+              android:text="Profile"
+              android:textAppearance="?android:textAppearanceMedium"
+              android:textColor="#fff" />
+
+          <ImageView
+              android:id="@+id/right_arrow2"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true"
+              android:layout_below="@+id/right_arrow1"
+              android:layout_marginRight="15dp"
+              android:layout_marginTop="20dp"
+              android:src="@drawable/ic_keyboard_arrow_right_white_24dp" />
+
+
 
       </RelativeLayout>
 

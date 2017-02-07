@@ -10,9 +10,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-
 import fragments.Dashboard;
+import fragments.DeviceStatus;
+import fragments.Feedback;
 import fragments.Intellisense;
+import fragments.Settings;
 
 public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
@@ -42,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.dashboard_id:
-                        fragmentTransaction = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction.replace(R.id.main_container,new Dashboard());
                         fragmentTransaction.commit();
                         getSupportActionBar().setTitle("Dashboard");
@@ -51,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
                     case R.id.devicestatus_id:
-                        fragmentTransaction = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction.replace(R.id.main_container,new DeviceStatus());
                         fragmentTransaction.commit();
                         getSupportActionBar().setTitle("DeviceStatusModel");
@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
                         drawerlayout.closeDrawers();
                         break;
                     case R.id.intellisense_id:
-                        fragmentTransaction = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction.replace(R.id.main_container,new Intellisense());
                         fragmentTransaction.commit();
                         getSupportActionBar().setTitle("Intellisense");
@@ -67,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
                         drawerlayout.closeDrawers();
                         break;
                     case R.id.feedback_id:
-                        fragmentTransaction = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction.replace(R.id.main_container,new Feedback());
                         fragmentTransaction.commit();
                         getSupportActionBar().setTitle("Feedback");
@@ -75,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
                         drawerlayout.closeDrawers();
                         break;
                     case R.id.settings_id:
-                        fragmentTransaction = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction.replace(R.id.main_container,new Settings());
                         fragmentTransaction.commit();
                         getSupportActionBar().setTitle("Settings");
