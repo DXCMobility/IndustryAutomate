@@ -1,5 +1,4 @@
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,754 +6,577 @@
     >
 
     <!-- TODO: Update blank fragment layout -->
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/statusItem"
+
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:weightSum="1">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:paddingBottom="5dp"
-            android:id="@+id/statusFactory"
-            android:layout_gravity="center"
-            android:textSize="25sp"
-            android:textColor="#FFFFFF"
-            android:text="Factory 1"/>
-
-        <android.support.v7.widget.CardView
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/statusItem"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
-            android:id="@+id/statusCard">
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_weight="0.8">
 
             <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:layout_margin="5dp">
 
-                android:padding="5dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="59dp"
-                        android:layout_marginRight="10dp"
-                        android:src="@drawable/icon"
-                        android:layout_weight="0.3"/>
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:id="@+id/cardDesc"
-                        android:layout_gravity="center"
-                        android:textStyle="bold"
-                        android:textSize="20sp"
-                        android:text="Assembly Line"
-                        android:layout_weight="0.3"/>
-                    <Switch
-
-                        android:layout_width="0dp"
-                        android:layout_height="10dp"
-                        android:layout_marginTop="10dp"
-                        android:maxHeight="10dp"
-                        android:minWidth="100dp"
-                        android:switchMinWidth="56dp"
-                        android:theme="@style/BrandedSwitch"
-                        android:thumbTextPadding="25dp"
-                        android:layout_weight="0.4"/>
-                     />
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_height="wrap_content">
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:padding="5dp">
-
-                        <TextView
-                            android:text="Status"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/textViewStatus"
-                            android:layout_weight="0.5"
-                            android:elevation="0dp" />
-
-                        <TextView
-                            android:text="OK"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/tvStatus"
-                            android:textStyle="bold"
-                            android:layout_weight="0.5"
-                            android:elevation="0dp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:padding="5dp">
-
-                        <TextView
-                            android:text="Power"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/power"
-                            android:layout_weight="0.5"
-                            android:elevation="0dp" />
-
-                        <TextView
-                            android:text="200KW"
-                            android:textStyle="bold"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/tvPower"
-                            android:layout_weight="0.5"
-                            android:elevation="0dp" />
-
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-
-        </android.support.v7.widget.CardView>
-
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        >
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.75"
-            android:weightSum="2"
-            android:padding="5dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="1">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="59dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/icon"
-                    android:layout_weight="0.3"/>
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:layout_gravity="center"
-                    android:textSize="20dp"
-                    android:textStyle="bold"
-                    android:text="Loads"
-                    android:layout_weight="0.3"/>
-                <Switch
-                    android:layout_width="0dp"
-                    android:layout_height="10dp"
-                    android:layout_marginTop="10dp"
-                    android:maxHeight="10dp"
-                    android:minWidth="100dp"
-                    android:switchMinWidth="56dp"
-                    android:theme="@style/BrandedSwitch"
-                    android:thumbTextPadding="25dp"
-                    android:layout_weight="0.4"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="5dp">
-
-                    <TextView
-                        android:text="Status"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:elevation="0dp" />
-
-                    <TextView
-                        android:text="OK"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:layout_weight="0.5"
-                        android:elevation="0dp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="5dp">
-
-                    <TextView
-                        android:text="Power"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:elevation="0dp" />
-
-                    <TextView
-                        android:text="200KW"
-                        android:textStyle="bold"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:elevation="0dp" />
-
-                </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
-
-    </android.support.v7.widget.CardView>
-
-
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
-            >
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.75"
-                android:weightSum="2"
-                android:padding="5dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="59dp"
-                        android:layout_marginRight="10dp"
-                        android:src="@drawable/icon"
-                        android:layout_weight="0.3"/>
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:layout_gravity="center"
-                        android:textSize="20dp"
-                        android:layout_weight="0.3"
-                        android:textStyle="bold"
-                        android:text="Cooling System" />
-                    <Switch
-                        android:layout_width="0dp"
-                        android:layout_height="10dp"
-                        android:layout_marginTop="10dp"
-                        android:maxHeight="10dp"
-                        android:minWidth="100dp"
-                        android:switchMinWidth="56dp"
-                        android:theme="@style/BrandedSwitch"
-                        android:thumbTextPadding="25dp"
-                        android:layout_weight="0.4"/>
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_height="wrap_content">
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:padding="5dp">
-
-                        <TextView
-                            android:text="Status"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.5"
-                            android:elevation="0dp" />
-
-                        <TextView
-                            android:text="OK"
-                            android:layout_width="0dp"
-                            android:textStyle="bold"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.5"
-                            android:elevation="0dp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:padding="5dp">
-
-                        <TextView
-                            android:text="Power"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.5"
-                            android:elevation="0dp" />
-
-                        <TextView
-                            android:text="200KW"
-                            android:layout_width="0dp"
-                            android:textStyle="bold"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.5"
-                            android:elevation="0dp" />
-
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-
-        </android.support.v7.widget.CardView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:paddingBottom="5dp"
-            android:layout_gravity="center"
-            android:textSize="25dp"
-            android:textColor="#FFFFFF"
-            android:text="Factory 2"/>
-
-
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        >
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.75"
-            android:weightSum="2"
-            android:padding="5dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="1">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="59dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/icon"
-                    android:layout_weight="0.3"
-                    />
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:layout_gravity="center"
-                    android:textSize="20dp"
-                    android:textStyle="bold"
-                    android:text="Cooling System"
-                    android:layout_weight="0.3"/>
-                <Switch
-                    android:layout_width="0dp"
-                    android:layout_height="10dp"
-                    android:layout_marginTop="10dp"
-                    android:maxHeight="10dp"
-                    android:minWidth="100dp"
-                    android:switchMinWidth="56dp"
-                    android:theme="@style/BrandedSwitch"
-                    android:thumbTextPadding="25dp"
-                    android:layout_weight="0.4"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="5dp">
-
-                    <TextView
-                        android:text="Status"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:elevation="0dp" />
-
-                    <TextView
-                        android:text="OK"
-                        android:layout_width="0dp"
-                        android:textStyle="bold"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:elevation="0dp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="5dp">
-
-                    <TextView
-                        android:text="Power"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:elevation="0dp" />
-
-                    <TextView
-                        android:text="200KW"
-                        android:textStyle="bold"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:elevation="0dp" />
-
-                </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
-
-    </android.support.v7.widget.CardView>
-
-
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        >
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.75"
-            android:weightSum="2"
-            android:padding="5dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="1">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="59dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/icon"
-                    android:layout_weight="0.3"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:textSize="20sp"
-                    android:layout_gravity="center"
-                    android:textStyle="bold"
-                    android:text="Alarm"
-                    android:layout_weight="0.3"/>
-                <Switch
-                    android:layout_width="0dp"
-                    android:layout_height="10dp"
-                    android:layout_marginTop="10dp"
-                    android:maxHeight="10dp"
-                    android:minWidth="100dp"
-                    android:switchMinWidth="56dp"
-                    android:theme="@style/BrandedSwitch"
-                    android:thumbTextPadding="25dp"
-                    android:layout_weight="0.4"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="5dp">
-
-                    <TextView
-                        android:text="Status"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:elevation="0dp" />
-
-                    <TextView
-                        android:text="OK"
-                        android:layout_width="0dp"
-                        android:textStyle="bold"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:elevation="0dp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="5dp">
-
-                    <TextView
-                        android:text="Power"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:elevation="0dp" />
-
-                    <TextView
-                        android:text="200KW"
-                        android:textStyle="bold"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:elevation="0dp" />
-
-                </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
-
-    </android.support.v7.widget.CardView>
-
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        >
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.75"
-            android:weightSum="2"
-            android:padding="5dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="1">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="59dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/icon"
-                    android:layout_weight="0.3"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:layout_weight="0.3"
-                    android:layout_gravity="center"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:text="Loads" />
-                <Switch
-                    android:layout_width="0dp"
-                    android:layout_height="10dp"
-                    android:layout_marginTop="10dp"
-                    android:maxHeight="10dp"
-                    android:minWidth="100dp"
-                    android:switchMinWidth="56dp"
-                    android:theme="@style/BrandedSwitch"
-                    android:thumbTextPadding="25dp"
-                    android:layout_weight="0.4"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="5dp">
-
-                    <TextView
-                        android:text="Status"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:elevation="0dp" />
-
-                    <TextView
-                        android:text="OK"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:layout_weight="0.5"
-                        android:elevation="0dp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="5dp">
-
-                    <TextView
-                        android:text="Power"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:elevation="0dp" />
-
-                    <TextView
-                        android:text="200KW"
-                        android:layout_width="0dp"
-                        android:textStyle="bold"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:elevation="0dp" />
-
-                </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
-
-    </android.support.v7.widget.CardView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:paddingBottom="5dp"
-            android:textColor="#FFFFFF"
-            android:layout_gravity="center"
-            android:textSize="25sp"
-            android:text="Power House"/>
-
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.75"
-                android:weightSum="2"
-                android:padding="5dp">
-
-                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:text="Factory 1"
+                    android:layout_gravity="center"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:layout_marginTop="15dp"/>
 
-                    <ImageView
-                        android:layout_width="71dp"
-                        android:layout_height="59dp"
-                        android:layout_marginRight="10dp"
-                        android:src="@drawable/icon"/>
-
-                </LinearLayout>
-                <LinearLayout
+                <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_height="wrap_content">
-                    <LinearLayout
-                        android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+
+                    android:id="@+id/statusCard">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
+
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:padding="5dp">
+                        >
 
-                        <TextView
-                            android:text="Overall Status"
-                            android:layout_width="0dp"
+                        <ImageView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="0.5"
-                            android:elevation="0dp" />
+                            android:src="@drawable/conveyor"
+                            android:id="@+id/img1"
+                            />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_toRightOf="@+id/img1"
 
+                            android:id="@+id/rel1">
+                            <TextView
+                                android:id="@+id/assembly_line1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Assembly Line"
+                                android:textStyle="bold"
+                                android:layout_marginLeft="5dp"
+                                android:layout_centerInParent="true"
+                                />
+                        </RelativeLayout>
                         <TextView
+                            android:id="@+id/status1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Status"
+                            android:layout_marginTop="3dp"
+                            android:layout_below="@+id/img1"/>
+                        <TextView
+                            android:id="@+id/ok1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:text="OK"
-                            android:layout_width="0dp"
-                            android:textStyle="bold"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@+id/rel1"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="35dp"/>
+                        <TextView
+                            android:id="@+id/power1"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="0.5"
-                            android:elevation="0dp" />
-                    </LinearLayout>
+                            android:text="Power"
+                            android:layout_below="@+id/status1"
+                            android:layout_marginTop="3dp"
+                            />
+                        <TextView
+                            android:id="@+id/kw1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="200Kw"
+                            android:layout_below="@+id/ok1"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="5dp"
+                            />
+                    </RelativeLayout>
+                </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/load_card">
 
                     <LinearLayout
-                        android:orientation="horizontal"
+                        android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_height="match_parent"
                         android:padding="5dp">
 
-                        <TextView
-                            android:text="Generating Power"
-                            android:layout_width="0dp"
+                        <RelativeLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="0.5"
-                            android:elevation="0dp" />
+                            >
 
-                        <TextView
-                            android:text="200KW"
-                            android:layout_width="0dp"
-                            android:textStyle="bold"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.5"
-                            android:elevation="0dp" />
-
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/bulb"
+                                android:id="@+id/img2"
+                                />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_toRightOf="@+id/img2"
+                                android:id="@+id/rel2">
+                                <TextView
+                                    android:id="@+id/loads"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Loads"
+                                    android:textStyle="bold"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_centerInParent="true"/>
+                            </RelativeLayout>
+                            <TextView
+                                android:id="@+id/status2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Status"
+                                android:layout_marginTop="3dp"
+                                android:layout_below="@+id/img2"/>
+                            <TextView
+                                android:id="@+id/ok2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="OK"
+                                android:layout_marginTop="5dp"
+                                android:layout_below="@+id/rel2"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="35dp"/>
+                            <TextView
+                                android:id="@+id/power2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Power"
+                                android:layout_below="@+id/status2"
+                                android:layout_marginTop="3dp"
+                                />
+                            <TextView
+                                android:id="@+id/kw2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="200Kw"
+                                android:layout_below="@+id/ok2"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="5dp"
+                                />
+                        </RelativeLayout>
                     </LinearLayout>
-                </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/cooling_card">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/fannn"
+                                android:id="@+id/img3"
+                                />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_toRightOf="@+id/img3"
+                                android:id="@+id/rel3">
+                                <TextView
+                                    android:id="@+id/cooling_sys"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Cooling System"
+                                    android:textStyle="bold"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_centerInParent="true"/>
+                            </RelativeLayout>
+                            <TextView
+                                android:id="@+id/status3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Status"
+                                android:layout_marginTop="3dp"
+                                android:layout_below="@+id/img3"/>
+                            <TextView
+                                android:id="@+id/ok3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="OK"
+                                android:layout_marginTop="5dp"
+                                android:layout_below="@+id/rel3"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="35dp"/>
+                            <TextView
+                                android:id="@+id/power3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Power"
+                                android:layout_below="@+id/status3"
+                                android:layout_marginTop="3dp"
+                                />
+                            <TextView
+                                android:id="@+id/kw3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="200Kw"
+                                android:layout_below="@+id/ok3"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="5dp"
+                                />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
             </LinearLayout>
 
-        </android.support.v7.widget.CardView>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="0.5"
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Factory 2"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:layout_marginTop="15dp"/>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/cooling2_card">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/fannn"
+                                android:id="@+id/img4"
+                                />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_toRightOf="@+id/img4"
+                                android:id="@+id/rel4">
+                                <TextView
+                                    android:id="@+id/cooling2_sys"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Cooling System"
+                                    android:textStyle="bold"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_centerInParent="true"/>
+                            </RelativeLayout>
+                            <TextView
+                                android:id="@+id/status4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Status"
+                                android:layout_marginTop="3dp"
+                                android:layout_below="@+id/img4"/>
+                            <TextView
+                                android:id="@+id/ok4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="OK"
+                                android:layout_marginTop="5dp"
+                                android:layout_below="@+id/rel4"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="35dp"/>
+                            <TextView
+                                android:id="@+id/power4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Power"
+                                android:layout_below="@+id/status4"
+                                android:layout_marginTop="3dp"
+                                />
+                            <TextView
+                                android:id="@+id/kw4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="200Kw"
+                                android:layout_below="@+id/ok4"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="5dp"
+                                />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/alarm_card">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/alarm"
+                                android:id="@+id/img5"
+                                />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_toRightOf="@+id/img5"
+                                android:id="@+id/rel5">
+                                <TextView
+                                    android:id="@+id/alarm"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Alarm"
+                                    android:textStyle="bold"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_centerInParent="true"/>
+                            </RelativeLayout>
+                            <TextView
+                                android:id="@+id/status5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Status"
+                                android:layout_marginTop="3dp"
+                                android:layout_below="@+id/img5"/>
+                            <TextView
+                                android:id="@+id/ok5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="OK"
+                                android:layout_marginTop="5dp"
+                                android:layout_below="@+id/rel5"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="35dp"/>
+                            <TextView
+                                android:id="@+id/power5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Power"
+                                android:layout_below="@+id/status5"
+                                android:layout_marginTop="3dp"
+                                />
+                            <TextView
+                                android:id="@+id/kw5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="200Kw"
+                                android:layout_below="@+id/ok5"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="5dp"
+                                />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/load2_card">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/bulb"
+                                android:id="@+id/img6"
+                                />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_toRightOf="@+id/img6"
+                                android:id="@+id/rel6">
+                                <TextView
+                                    android:id="@+id/loads2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Loads"
+                                    android:textStyle="bold"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_centerInParent="true"/>
+                            </RelativeLayout>
+                            <TextView
+                                android:id="@+id/status6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Status"
+                                android:layout_marginTop="3dp"
+                                android:layout_below="@+id/img6"/>
+                            <TextView
+                                android:id="@+id/ok6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="OK"
+                                android:layout_marginTop="5dp"
+                                android:layout_below="@+id/rel6"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="35dp"/>
+                            <TextView
+                                android:id="@+id/power6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Power"
+                                android:layout_below="@+id/status6"
+                                android:layout_marginTop="3dp"
+                                />
+                            <TextView
+                                android:id="@+id/kw6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="200Kw"
+                                android:layout_below="@+id/ok6"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="5dp"
+                                />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:orientation="vertical"
+            android:layout_margin="5dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:id="@+id/power_house">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/powerssss"
+                                android:layout_margin="5dp"
+                                android:id="@+id/img7"/>
+                        <TextView
+                            android:id="@+id/powerhouse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Power House"
+                            android:layout_marginTop="10dp"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="100dp"
+                            android:layout_toRightOf="@id/img7"
+                            android:layout_centerHorizontal="true"/>
+
+                        <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_below="@+id/powerhouse"
+                            android:layout_marginTop="10dp"
+                       android:layout_marginLeft="800dp"
+                       android:text="Generating Power      434Kw"
+                            android:layout_centerInParent="true"/>
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+
+
+
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
     </LinearLayout>
 
 
-</ScrollView>
+
 
 </android.support.design.widget.CoordinatorLayout>
