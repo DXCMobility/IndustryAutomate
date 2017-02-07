@@ -2,6 +2,7 @@ package Presenter;
 
 import android.app.Activity;
 import android.os.AsyncTask;
+import android.os.SystemClock;
 
 import org.json.JSONObject;
 
@@ -50,7 +51,7 @@ public class ConnectionTask extends AsyncTask<String, String, String> {
     @Override
     protected void onPostExecute(String result) {
         // execution of result of Long time consuming operation
-
+        System.out.println("IN post execute......");
         iClearedDB.AutomatedData(lstIndustry);
 
 
