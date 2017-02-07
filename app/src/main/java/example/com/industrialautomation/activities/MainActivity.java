@@ -9,6 +9,11 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
+
+import Pojo.Industry;
+import Presenter.ConnectionTask;
+import Presenter.IClearedDB;
 import example.com.industrialautomation.R;
 import fragments.Dashboard;
 import fragments.DeviceStatus;
@@ -16,7 +21,7 @@ import fragments.Feedback;
 import fragments.Intellisense;
 import fragments.Settings;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements IClearedDB {
     Toolbar toolbar;
     DrawerLayout drawerlayout;
     ActionBarDrawerToggle actionBarDrawerToggle;
@@ -27,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        new ConnectionTask(this,this).execute();
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         drawerlayout = (DrawerLayout)findViewById(R.id.drawer_layout);
@@ -96,5 +103,16 @@ public class MainActivity extends AppCompatActivity {
         super.onPostCreate(savedInstanceState);
         actionBarDrawerToggle.syncState();
 
+    }
+
+
+    @Override
+    public void AutomatedData(ArrayList<Industry> lstIndustry) {
+
+        if(lstIndustry !=null && lstIndustry.size() > 0){
+            System.out.println("lsIndustry>>>>>>"+lstIndustry.size());
+            System.out.println("lsIndustry>>>>>&&&>"+lstIndustry);
+
+        }
     }
 }

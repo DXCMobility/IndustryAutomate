@@ -7,5 +7,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="intellisense_reduce">Reduce Cooling System Consumption</string>
     <string name="intellisense_opti">Optimization steps:</string>
+    <string name="factory1">Factory 1</string>
 
 </resources>
