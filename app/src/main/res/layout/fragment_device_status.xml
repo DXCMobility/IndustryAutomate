@@ -138,7 +138,7 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/bulb"
+                                android:src="@drawable/bulb1"
                                 android:id="@+id/img2"
                                 />
                             <RelativeLayout
@@ -382,7 +382,7 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/alarm"
+                                android:src="@drawable/alarm1"
                                 android:id="@+id/img5"
                                 />
                             <RelativeLayout
@@ -457,7 +457,7 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/bulb"
+                                android:src="@drawable/bulb1"
                                 android:id="@+id/img6"
                                 />
                             <RelativeLayout
