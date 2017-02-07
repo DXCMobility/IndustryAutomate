@@ -23,9 +23,8 @@ public class FactoryDashboard {
 
     private ArrayList<Integer> images;
 
-    public FactoryDashboard(String factory, String status, String power_consumption, String temp, String humidity, ArrayList<Integer> images) {
+    public FactoryDashboard(String factory, String power_consumption, String temp, String humidity, ArrayList<Integer> images) {
         this.factory=factory;
-        this.status = status;
         this.power_consumption = power_consumption;
         this.temp = temp;
         this.humidity = humidity;

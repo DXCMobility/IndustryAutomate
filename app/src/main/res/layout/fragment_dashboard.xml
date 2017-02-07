@@ -14,7 +14,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/relative"
         android:layout_width="match_parent" android:layout_height="100dp"
-        android:background="#01a982"
+        android:background="#425563"
         >
 
         <TextView
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:text="Industry Automation"
-            android:textSize="15dp"
+            android:textSize="17dp"
             android:textStyle="bold"
             android:id="@+id/email"
             android:textColor="#FFFFFF"
@@ -51,7 +51,7 @@
         android:id="@+id/recycler_factory1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="105dp"
+        android:layout_marginTop="100dp"
         android:layout_below="@id/relative"
         android:background="#425563">
 

@@ -19,7 +19,7 @@ import models.FactoryDashboard;
  * Created by kumardev on 2/3/2017.
  */
 
-public class FactoryDashboardAdapter extends RecyclerView.Adapter<FactoryDashboardAdapter.FactoryViewHolder> implements View.OnClickListener {
+public class FactoryDashboardAdapter extends RecyclerView.Adapter<FactoryDashboardAdapter.FactoryViewHolder>  {
 
     private LinearLayout layoutOne,layoutTwo;
 
@@ -45,7 +45,6 @@ public class FactoryDashboardAdapter extends RecyclerView.Adapter<FactoryDashboa
     @Override
     public void onBindViewHolder(final FactoryViewHolder holder, int position) {
         holder.factory.setText(factoryDashboards.get(position).getFactory());
-        holder.status.setText(factoryDashboards.get(position).getStatus());
         holder.power_consumption.setText(factoryDashboards.get(position).getPower_consumption());
         holder.temp.setText(factoryDashboards.get(position).getTemp());
         holder.humidity.setText(factoryDashboards.get(position).getHumidity());
@@ -58,16 +57,7 @@ public class FactoryDashboardAdapter extends RecyclerView.Adapter<FactoryDashboa
         if(3<images.size()) {
             holder.image4.setImageResource(images.get(3));
         }
-        holder.linearDetail.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(holder.linearRealDevices.getVisibility()==View.VISIBLE){
-                    holder.linearRealDevices.setVisibility(View.GONE);
-                }else {
-                    holder.linearRealDevices.setVisibility(View.VISIBLE);
-                }
-            }
-        });
+
 
 
     }
@@ -77,22 +67,6 @@ public class FactoryDashboardAdapter extends RecyclerView.Adapter<FactoryDashboa
     @Override
     public int getItemCount() {
         return factoryDashboards.size();
-    }
-
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.linearDetails:
-
-                if(layoutTwo.getVisibility()==View.VISIBLE){
-                   layoutTwo.setVisibility(View.GONE);
-                }else {
-                   layoutTwo.setVisibility(View.VISIBLE);
-
-                }
-
-                break;
-        }
     }
 
     public static class FactoryViewHolder extends RecyclerView.ViewHolder {
@@ -105,12 +79,9 @@ public class FactoryDashboardAdapter extends RecyclerView.Adapter<FactoryDashboa
             super(itemView);
             cv = (CardView)itemView.findViewById(R.id.factoryCard);
             factory=(TextView)itemView.findViewById(R.id.cardFactory);
-            status = (TextView)itemView.findViewById(R.id.tvFactoryStatus);
             power_consumption = (TextView)itemView.findViewById(R.id.tvPowerConsumption);
             temp = (TextView)itemView.findViewById(R.id.tvTemp);
             humidity = (TextView)itemView.findViewById(R.id.tvHumidity);
-            linearDetail= (LinearLayout)itemView.findViewById(R.id.linearDetails);
-            linearRealDevices= (LinearLayout) itemView.findViewById(R.id.linearRealDevices);
             image1=(ImageView)itemView.findViewById(R.id.image1);
             image2=(ImageView)itemView.findViewById(R.id.image2);
             image3=(ImageView)itemView.findViewById(R.id.image3);
