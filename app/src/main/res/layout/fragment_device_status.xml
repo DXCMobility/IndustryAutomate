@@ -6,8 +6,9 @@
     >
 
     <!-- TODO: Update blank fragment layout -->
-
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/statusItem"
         android:layout_width="match_parent"
@@ -21,6 +22,8 @@
             android:textStyle="bold"
             android:paddingBottom="5dp"
             android:id="@+id/statusFactory"
+            android:layout_gravity="center"
+            android:textSize="25sp"
             android:textColor="#FFFFFF"
             android:text="Factory 1"/>
 
@@ -53,6 +56,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:id="@+id/cardDesc"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
                         android:text="Assembly Line" />
 
                 </LinearLayout>
@@ -80,6 +86,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:id="@+id/tvStatus"
+                            android:textStyle="bold"
                             android:layout_weight="0.5"
                             android:elevation="0dp" />
                     </LinearLayout>
@@ -101,6 +108,7 @@
 
                         <TextView
                             android:text="200KW"
+                            android:textStyle="bold"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:id="@+id/tvPower"
@@ -112,6 +120,96 @@
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.75"
+            android:weightSum="2"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="71dp"
+                    android:layout_height="59dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/icon"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:text="Loads" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:text="Status"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:elevation="0dp" />
+
+                    <TextView
+                        android:text="OK"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_weight="0.5"
+                        android:elevation="0dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:text="Power"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:elevation="0dp" />
+
+                    <TextView
+                        android:text="200KW"
+                        android:textStyle="bold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:elevation="0dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
 
 
         <android.support.v7.widget.CardView
@@ -142,6 +240,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
+                        android:layout_gravity="center"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
                         android:text="Cooling System" />
 
                 </LinearLayout>
@@ -166,6 +267,7 @@
                         <TextView
                             android:text="OK"
                             android:layout_width="0dp"
+                            android:textStyle="bold"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.5"
                             android:elevation="0dp" />
@@ -188,6 +290,7 @@
                         <TextView
                             android:text="200KW"
                             android:layout_width="0dp"
+                            android:textStyle="bold"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.5"
                             android:elevation="0dp" />
@@ -197,6 +300,287 @@
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:paddingBottom="5dp"
+            android:layout_gravity="center"
+            android:textSize="25dp"
+            android:textColor="#FFFFFF"
+            android:text="Factory 2"/>
+
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.75"
+            android:weightSum="2"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="71dp"
+                    android:layout_height="59dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/icon"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:text="Cooling System" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:text="Status"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:elevation="0dp" />
+
+                    <TextView
+                        android:text="OK"
+                        android:layout_width="0dp"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:elevation="0dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:text="Power"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:elevation="0dp" />
+
+                    <TextView
+                        android:text="200KW"
+                        android:textStyle="bold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:elevation="0dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.75"
+            android:weightSum="2"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="71dp"
+                    android:layout_height="59dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/icon"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:text="Alarm" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:text="Status"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:elevation="0dp" />
+
+                    <TextView
+                        android:text="OK"
+                        android:layout_width="0dp"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:elevation="0dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:text="Power"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:elevation="0dp" />
+
+                    <TextView
+                        android:text="200KW"
+                        android:textStyle="bold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:elevation="0dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.75"
+            android:weightSum="2"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="71dp"
+                    android:layout_height="59dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/icon"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:text="Loads" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:text="Status"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:elevation="0dp" />
+
+                    <TextView
+                        android:text="OK"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_weight="0.5"
+                        android:elevation="0dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:text="Power"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:elevation="0dp" />
+
+                    <TextView
+                        android:text="200KW"
+                        android:layout_width="0dp"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:elevation="0dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
 
         <TextView
             android:layout_width="wrap_content"
@@ -204,6 +588,8 @@
             android:textStyle="bold"
             android:paddingBottom="5dp"
             android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:textSize="25sp"
             android:text="Power House"/>
 
         <android.support.v7.widget.CardView
@@ -252,6 +638,7 @@
                         <TextView
                             android:text="OK"
                             android:layout_width="0dp"
+                            android:textStyle="bold"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.5"
                             android:elevation="0dp" />
@@ -274,6 +661,7 @@
                         <TextView
                             android:text="200KW"
                             android:layout_width="0dp"
+                            android:textStyle="bold"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.5"
                             android:elevation="0dp" />
@@ -286,6 +674,6 @@
     </LinearLayout>
 
 
-
+</ScrollView>
 
 </android.support.design.widget.CoordinatorLayout>
