@@ -5,9 +5,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import example.com.industrialautomation.R;
@@ -49,6 +51,13 @@ public class FactoryDashboardAdapter extends RecyclerView.Adapter<FactoryDashboa
         holder.humidity.setText(factoryDashboards.get(position).getHumidity());
         layoutOne=holder.linearDetail;
         layoutTwo=holder.linearRealDevices;
+        ArrayList<Integer> images=factoryDashboards.get(position).getImages();
+        holder.image1.setImageResource(images.get(0));
+        holder.image2.setImageResource(images.get(1));
+        holder.image3.setImageResource(images.get(2));
+        if(3<images.size()) {
+            holder.image4.setImageResource(images.get(3));
+        }
         holder.linearDetail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -79,6 +88,7 @@ public class FactoryDashboardAdapter extends RecyclerView.Adapter<FactoryDashboa
                    layoutTwo.setVisibility(View.GONE);
                 }else {
                    layoutTwo.setVisibility(View.VISIBLE);
+
                 }
 
                 break;
@@ -88,6 +98,7 @@ public class FactoryDashboardAdapter extends RecyclerView.Adapter<FactoryDashboa
     public static class FactoryViewHolder extends RecyclerView.ViewHolder {
         CardView cv;
         TextView status,power_consumption,temp,humidity,factory;
+        ImageView image1,image2,image3,image4;
         LinearLayout linearDetail,linearRealDevices;
 
         FactoryViewHolder(View itemView) {
@@ -100,6 +111,10 @@ public class FactoryDashboardAdapter extends RecyclerView.Adapter<FactoryDashboa
             humidity = (TextView)itemView.findViewById(R.id.tvHumidity);
             linearDetail= (LinearLayout)itemView.findViewById(R.id.linearDetails);
             linearRealDevices= (LinearLayout) itemView.findViewById(R.id.linearRealDevices);
+            image1=(ImageView)itemView.findViewById(R.id.image1);
+            image2=(ImageView)itemView.findViewById(R.id.image2);
+            image3=(ImageView)itemView.findViewById(R.id.image3);
+            image4=(ImageView)itemView.findViewById(R.id.image4);
         }
     }
 }

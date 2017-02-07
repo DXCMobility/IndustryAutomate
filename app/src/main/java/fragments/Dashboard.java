@@ -59,8 +59,21 @@ public class Dashboard extends Fragment implements View.OnClickListener {
 
         private void initializeData(){
             factoryDashboards = new ArrayList<>();
-            factoryDashboards.add(new FactoryDashboard("Factory 1","true", "50", "30","10"));
-            factoryDashboards.add(new FactoryDashboard("Factory 2","false", "90", "20","9"));
+            ArrayList<Integer> factory1Images=new ArrayList<Integer>();
+            factory1Images.add(R.drawable.conveyor);
+            factory1Images.add(R.drawable.fan);
+            factory1Images.add(R.drawable.light_bulb);
+            factory1Images.add(R.drawable.cooler);
+            ArrayList<Integer> factory2Images=new ArrayList<Integer>();
+            factory2Images.add(R.drawable.cooler);
+            factory2Images.add(R.drawable.alarm);
+            factory2Images.add(R.drawable.light_bulb);
+
+
+
+
+            factoryDashboards.add(new FactoryDashboard("Factory 1","true", "50", "30","10",factory1Images));
+            factoryDashboards.add(new FactoryDashboard("Factory 2","false", "90", "20","9",factory2Images));
 
 
 

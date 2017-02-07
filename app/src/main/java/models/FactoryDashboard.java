@@ -1,5 +1,7 @@
 package models;
 
+import java.util.ArrayList;
+
 /**
  * Created by kumardev on 2/3/2017.
  */
@@ -11,12 +13,23 @@ public class FactoryDashboard {
     private String temp;
     private String humidity;
 
-    public FactoryDashboard(String factory,String status, String power_consumption, String temp, String humidity) {
+    public ArrayList<Integer> getImages() {
+        return images;
+    }
+
+    public void setImages(ArrayList<Integer> images) {
+        this.images = images;
+    }
+
+    private ArrayList<Integer> images;
+
+    public FactoryDashboard(String factory, String status, String power_consumption, String temp, String humidity, ArrayList<Integer> images) {
         this.factory=factory;
         this.status = status;
         this.power_consumption = power_consumption;
         this.temp = temp;
         this.humidity = humidity;
+        this.images=images;
     }
 
     public  String getFactory()

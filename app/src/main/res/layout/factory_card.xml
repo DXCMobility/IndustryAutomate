@@ -157,22 +157,31 @@
                 android:layout_height="match_parent"
                 android:visibility="gone"
                 android:gravity="center_horizontal"
-                android:weightSum="3">
+                android:weightSum="4">
 
                <ImageView
-                   android:layout_width="wrap_content"
+                   android:layout_width="0dp"
                    android:layout_height="match_parent"
-                   android:src="@drawable/account"
+                   android:layout_gravity="center"
+                   android:id="@+id/image1"
                    android:layout_weight="1"/>
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:src="@drawable/dashboard"
+                    android:layout_gravity="center"
+                    android:id="@+id/image2"
                     android:layout_weight="1"/>
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:src="@drawable/devices"
+                    android:layout_gravity="center"
+                    android:id="@+id/image3"
+                    android:layout_weight="1"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:id="@+id/image4"
                     android:layout_weight="1"/>
 
             </LinearLayout>
