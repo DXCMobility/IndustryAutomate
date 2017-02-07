@@ -1,4 +1,5 @@
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -37,29 +38,43 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.75"
-                android:weightSum="2"
+
                 android:padding="5dp">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:weightSum="1">
 
                     <ImageView
-                        android:layout_width="71dp"
+                        android:layout_width="0dp"
                         android:layout_height="59dp"
                         android:layout_marginRight="10dp"
-                        android:src="@drawable/icon"/>
+                        android:src="@drawable/icon"
+                        android:layout_weight="0.3"/>
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:id="@+id/cardDesc"
                         android:layout_gravity="center"
                         android:textStyle="bold"
                         android:textSize="20sp"
-                        android:text="Assembly Line" />
+                        android:text="Assembly Line"
+                        android:layout_weight="0.3"/>
+                    <Switch
+
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="10dp"
+                        android:maxHeight="10dp"
+                        android:minWidth="100dp"
+                        android:switchMinWidth="56dp"
+                        android:theme="@style/BrandedSwitch"
+                        android:thumbTextPadding="25dp"
+                        android:layout_weight="0.4"/>
+                     />
 
                 </LinearLayout>
                 <LinearLayout
@@ -137,23 +152,36 @@
             android:padding="5dp">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="1">
 
                 <ImageView
-                    android:layout_width="71dp"
+                    android:layout_width="0dp"
                     android:layout_height="59dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/icon"/>
+                    android:src="@drawable/icon"
+                    android:layout_weight="0.3"/>
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:layout_gravity="center"
                     android:textSize="20dp"
                     android:textStyle="bold"
-                    android:text="Loads" />
+                    android:text="Loads"
+                    android:layout_weight="0.3"/>
+                <Switch
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="10dp"
+                    android:maxHeight="10dp"
+                    android:minWidth="100dp"
+                    android:switchMinWidth="56dp"
+                    android:theme="@style/BrandedSwitch"
+                    android:thumbTextPadding="25dp"
+                    android:layout_weight="0.4"/>
 
             </LinearLayout>
             <LinearLayout
@@ -227,23 +255,36 @@
                 android:padding="5dp">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:weightSum="1">
 
                     <ImageView
-                        android:layout_width="71dp"
+                        android:layout_width="0dp"
                         android:layout_height="59dp"
                         android:layout_marginRight="10dp"
-                        android:src="@drawable/icon"/>
+                        android:src="@drawable/icon"
+                        android:layout_weight="0.3"/>
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:layout_gravity="center"
                         android:textSize="20dp"
+                        android:layout_weight="0.3"
                         android:textStyle="bold"
                         android:text="Cooling System" />
+                    <Switch
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="10dp"
+                        android:maxHeight="10dp"
+                        android:minWidth="100dp"
+                        android:switchMinWidth="56dp"
+                        android:theme="@style/BrandedSwitch"
+                        android:thumbTextPadding="25dp"
+                        android:layout_weight="0.4"/>
 
                 </LinearLayout>
                 <LinearLayout
@@ -327,23 +368,37 @@
             android:padding="5dp">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="1">
 
                 <ImageView
-                    android:layout_width="71dp"
+                    android:layout_width="0dp"
                     android:layout_height="59dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/icon"/>
+                    android:src="@drawable/icon"
+                    android:layout_weight="0.3"
+                    />
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:layout_gravity="center"
                     android:textSize="20dp"
                     android:textStyle="bold"
-                    android:text="Cooling System" />
+                    android:text="Cooling System"
+                    android:layout_weight="0.3"/>
+                <Switch
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="10dp"
+                    android:maxHeight="10dp"
+                    android:minWidth="100dp"
+                    android:switchMinWidth="56dp"
+                    android:theme="@style/BrandedSwitch"
+                    android:thumbTextPadding="25dp"
+                    android:layout_weight="0.4"/>
 
             </LinearLayout>
             <LinearLayout
@@ -418,23 +473,36 @@
             android:padding="5dp">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="1">
 
                 <ImageView
-                    android:layout_width="71dp"
+                    android:layout_width="0dp"
                     android:layout_height="59dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/icon"/>
+                    android:src="@drawable/icon"
+                    android:layout_weight="0.3"/>
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:textSize="20sp"
                     android:layout_gravity="center"
                     android:textStyle="bold"
-                    android:text="Alarm" />
+                    android:text="Alarm"
+                    android:layout_weight="0.3"/>
+                <Switch
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="10dp"
+                    android:maxHeight="10dp"
+                    android:minWidth="100dp"
+                    android:switchMinWidth="56dp"
+                    android:theme="@style/BrandedSwitch"
+                    android:thumbTextPadding="25dp"
+                    android:layout_weight="0.4"/>
 
             </LinearLayout>
             <LinearLayout
@@ -508,23 +576,36 @@
             android:padding="5dp">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="1">
 
                 <ImageView
-                    android:layout_width="71dp"
+                    android:layout_width="0dp"
                     android:layout_height="59dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/icon"/>
+                    android:src="@drawable/icon"
+                    android:layout_weight="0.3"/>
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
+                    android:layout_weight="0.3"
                     android:layout_gravity="center"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     android:text="Loads" />
+                <Switch
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="10dp"
+                    android:maxHeight="10dp"
+                    android:minWidth="100dp"
+                    android:switchMinWidth="56dp"
+                    android:theme="@style/BrandedSwitch"
+                    android:thumbTextPadding="25dp"
+                    android:layout_weight="0.4"/>
 
             </LinearLayout>
             <LinearLayout
