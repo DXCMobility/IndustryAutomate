@@ -14,14 +14,13 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/relative"
         android:layout_width="match_parent" android:layout_height="100dp"
-        android:background="#425563"
         >
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="HPE"
-            android:textSize="20dp"
+            android:textSize="25dp"
             android:textStyle="bold"
             android:id="@+id/name"
             android:textColor="#FFFFFF"
@@ -34,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:text="Industry Automation"
-            android:textSize="17dp"
+            android:textSize="20dp"
             android:textStyle="bold"
             android:id="@+id/email"
             android:textColor="#FFFFFF"
@@ -53,7 +52,7 @@
         android:layout_height="match_parent"
         android:layout_marginTop="100dp"
         android:layout_below="@id/relative"
-        android:background="#425563">
+        >
 
     </android.support.v7.widget.RecyclerView>
 

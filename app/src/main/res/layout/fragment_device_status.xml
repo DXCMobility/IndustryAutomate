@@ -2,7 +2,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#425563"
     >
 
     <!-- TODO: Update blank fragment layout -->
@@ -92,6 +91,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Status"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
                             android:layout_marginTop="3dp"
                             android:layout_below="@+id/img1"/>
                         <TextView
@@ -99,6 +100,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="OK"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
                             android:layout_marginTop="5dp"
                             android:layout_below="@+id/rel1"
                             android:layout_alignParentRight="true"
@@ -108,6 +111,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Power"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
                             android:layout_below="@+id/status1"
                             android:layout_marginTop="3dp"
                             />
@@ -116,6 +121,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="200Kw"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
                             android:layout_below="@+id/ok1"
                             android:layout_alignParentRight="true"
                             android:layout_marginRight="20dp"
@@ -174,6 +181,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Status"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
                                 android:layout_marginTop="3dp"
                                 android:layout_below="@+id/img2"/>
                             <TextView
@@ -181,6 +190,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="OK"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
                                 android:layout_marginTop="5dp"
                                 android:layout_below="@+id/rel2"
                                 android:layout_alignParentRight="true"
@@ -190,6 +201,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Power"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
                                 android:layout_below="@+id/status2"
                                 android:layout_marginTop="3dp"
                                 />
@@ -198,6 +211,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="200Kw"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
                                 android:layout_below="@+id/ok2"
                                 android:layout_alignParentRight="true"
                                 android:layout_marginRight="20dp"
@@ -255,6 +270,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Status"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
                                 android:layout_marginTop="3dp"
                                 android:layout_below="@+id/img3"/>
                             <TextView
@@ -262,6 +279,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="OK"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
                                 android:layout_marginTop="5dp"
                                 android:layout_below="@+id/rel3"
                                 android:layout_alignParentRight="true"
@@ -271,6 +290,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Power"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
                                 android:layout_below="@+id/status3"
                                 android:layout_marginTop="3dp"
                                 />
@@ -279,6 +300,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="200Kw"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
                                 android:layout_below="@+id/ok3"
                                 android:layout_alignParentRight="true"
                                 android:layout_marginRight="20dp"
@@ -349,6 +372,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Status"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
                                 android:layout_marginTop="3dp"
                                 android:layout_below="@+id/img4"/>
                             <TextView
@@ -356,6 +381,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="OK"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
                                 android:layout_marginTop="5dp"
                                 android:layout_below="@+id/rel4"
                                 android:layout_alignParentRight="true"
@@ -365,6 +392,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Power"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
                                 android:layout_below="@+id/status4"
                                 android:layout_marginTop="3dp"
                                 />
@@ -373,6 +402,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="200Kw"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
                                 android:layout_below="@+id/ok4"
                                 android:layout_alignParentRight="true"
                                 android:layout_marginRight="20dp"
@@ -424,6 +455,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Status"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
                                 android:layout_marginTop="3dp"
                                 android:layout_below="@+id/img5"/>
                             <TextView
@@ -431,6 +464,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="OK"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
                                 android:layout_marginTop="5dp"
                                 android:layout_below="@+id/rel5"
                                 android:layout_alignParentRight="true"
@@ -440,6 +475,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Power"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
                                 android:layout_below="@+id/status5"
                                 android:layout_marginTop="3dp"
                                 />
@@ -448,6 +485,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="200Kw"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
                                 android:layout_below="@+id/ok5"
                                 android:layout_alignParentRight="true"
                                 android:layout_marginRight="20dp"
@@ -499,6 +538,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Status"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
                                 android:layout_marginTop="3dp"
                                 android:layout_below="@+id/img6"/>
                             <TextView
@@ -506,6 +547,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="OK"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
                                 android:layout_marginTop="5dp"
                                 android:layout_below="@+id/rel6"
                                 android:layout_alignParentRight="true"
@@ -515,6 +558,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Power"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
                                 android:layout_below="@+id/status6"
                                 android:layout_marginTop="3dp"
                                 />
@@ -523,6 +568,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="200Kw"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
                                 android:layout_below="@+id/ok6"
                                 android:layout_alignParentRight="true"
                                 android:layout_marginRight="20dp"
@@ -539,7 +586,7 @@
             android:layout_height="0dp"
             android:layout_weight="0.2"
             android:orientation="vertical"
-            android:layout_margin="5dp">
+            >
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
@@ -551,9 +598,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     >
-
-
-                        <RelativeLayout
+                    <RelativeLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
                             <ImageView
@@ -578,6 +623,8 @@
                        android:layout_height="wrap_content"
                        android:layout_below="@+id/powerhouse"
                             android:layout_marginTop="10dp"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
                        android:layout_marginLeft="800dp"
                        android:text="Generating Power      434Kw"
                             android:layout_centerInParent="true"/>
