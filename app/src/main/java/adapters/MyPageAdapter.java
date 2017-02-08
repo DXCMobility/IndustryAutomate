@@ -16,9 +16,7 @@ import fragments.ScreenSlidePageFragment;
 
 public class MyPageAdapter extends FragmentStatePagerAdapter {
 
-
-
-
+    final int MAX_FACTORY = 2;
 
     public MyPageAdapter(FragmentManager fm) {
         super(fm);
@@ -28,11 +26,16 @@ public class MyPageAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return new ScreenSlidePageFragment();
+
+            return ScreenSlidePageFragment.init(position);
+
+
     }
 
     @Override
     public int getCount() {
-        return 2;
+
+        return MAX_FACTORY;
     }
+
 }
