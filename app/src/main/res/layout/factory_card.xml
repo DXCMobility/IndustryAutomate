@@ -25,7 +25,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:textSize="20sp"
+                android:textSize="25dp"
                 android:textStyle="bold"
                 android:layout_marginBottom="5dp"
                 android:id="@+id/cardFactory"
@@ -128,20 +128,22 @@
                 android:id="@+id/factory1linearDetails"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#425563"
+                android:background="#F4F6F7"
+                android:layout_margin="20dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Details"
-                    android:textSize="17sp"
-                    android:textColor="@color/colorAccent"
+                    android:textSize="20dp"
+                    android:textColor="#000"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="2dp"/>
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
                     >
                     <ImageView
                         android:layout_width="120dp"
@@ -150,14 +152,17 @@
                         android:id="@+id/image1"
                         android:layout_alignParentLeft="true"
                         android:padding="25dp"/>
+
+
                     <ImageView
                         android:layout_width="120dp"
                         android:layout_height="120dp"
+                        android:layout_alignParentRight="true"
                         android:layout_gravity="center"
                         android:padding="25dp"
                         android:id="@+id/image2"
-                        android:layout_alignParentRight="true"
                         />
+
                     <ImageView
                         android:layout_width="120dp"
                         android:layout_height="120dp"
@@ -167,6 +172,8 @@
                         android:layout_below="@+id/image1"
                         android:id="@+id/image3"
                         />
+
+
                     <ImageView
                         android:layout_width="120dp"
                         android:layout_height="120dp"

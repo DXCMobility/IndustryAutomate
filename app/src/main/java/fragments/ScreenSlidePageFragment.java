@@ -151,11 +151,11 @@ public class ScreenSlidePageFragment extends Fragment {
     private void predLineChartInit() {
 
         ArrayList<Entry> entries = new ArrayList<>();
-        entries.add(new Entry(5f, 0));
+        entries.add(new Entry(15f, 0));
         entries.add(new Entry(10f, 1));
-        entries.add(new Entry(15f, 2));
-        entries.add(new Entry(20f, 3));
-        entries.add(new Entry(25f, 4));
+        entries.add(new Entry(5f, 2));
+        entries.add(new Entry(12f, 3));
+        entries.add(new Entry(30f, 4));
 
         LineDataSet dataset = new LineDataSet(entries,"Predictive Analysis");
         ArrayList<String> labels = new ArrayList<String>();
