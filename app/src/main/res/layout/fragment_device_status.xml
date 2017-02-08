@@ -46,11 +46,19 @@
 
                     android:id="@+id/statusCard">
 
+
+
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="5dp">
+
+                    <Switch
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/switch_assembly"
+                        android:theme="@style/BrandedSwitch"/>
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -130,6 +138,12 @@
                         android:layout_height="match_parent"
                         android:padding="5dp">
 
+                        <Switch
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/switch_loads"
+                            android:theme="@style/BrandedSwitch"/>
+
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -204,6 +218,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:padding="5dp">
+
+                        <Switch
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/switch_cooling"
+                            android:theme="@style/BrandedSwitch"/>
 
                         <RelativeLayout
                             android:layout_width="match_parent"

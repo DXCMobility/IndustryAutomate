@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "798396400961",
+    "firebase_url": "https://storesupervisor-836fa.firebaseio.com",
+    "project_id": "storesupervisor-836fa",
+    "storage_bucket": "storesupervisor-836fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798396400961:android:33022f10c65a007a",
+        "android_client_info": {
+          "package_name": "example.com.industrialautomation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "798396400961-dc7tua9qps4k4bhp2qmqn353evc7vcto.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD739SKTGUH0dmTUfQKVsLh5F2aZCMXUxY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798396400961:android:9a5ddb8abbcb1707",
+        "android_client_info": {
+          "package_name": "example.com.industrialautomation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "798396400961-dc7tua9qps4k4bhp2qmqn353evc7vcto.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD739SKTGUH0dmTUfQKVsLh5F2aZCMXUxY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
