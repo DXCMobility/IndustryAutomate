@@ -19,6 +19,7 @@ public class Industry implements Parcelable {
     private F1_bulbs[] f1_bulbs;
 
     private Generic_fan generic_fan;
+    private String power_consumption;
 
     private Windmill windmill;
 
@@ -80,6 +81,13 @@ public class Industry implements Parcelable {
     public Windmill getWindmill(){return windmill;}
     public Industry2 getIndustry2(){return industry2;}
 
+    public String getPower_consumption() {
+        return power_consumption;
+    }
+
+    public void setPower_consumption(String power_consumption) {
+        this.power_consumption = power_consumption;
+    }
 
     public void setGeneric_fan (Generic_fan generic_fan)
     {

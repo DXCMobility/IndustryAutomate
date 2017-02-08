@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements IClearedDB {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        new ConnectionTask(this,this).execute();
+//        new ConnectionTask(this,this).execute();
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         drawerlayout = (DrawerLayout)findViewById(R.id.drawer_layout);
@@ -112,6 +112,7 @@ public class MainActivity extends AppCompatActivity implements IClearedDB {
         if(lstIndustry !=null && lstIndustry.size() > 0){
             System.out.println("lsIndustry>>>>>>"+lstIndustry.size());
             System.out.println("lsIndustry>>>>>&&&>"+lstIndustry);
+
 
         }
     }

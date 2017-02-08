@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 
 import java.util.List;
 
+import Presenter.IClearedDB;
 import fragments.ScreenSlidePageFragment;
 
 /**
@@ -16,8 +17,12 @@ import fragments.ScreenSlidePageFragment;
 public class MyPageAdapter extends FragmentStatePagerAdapter {
 
 
+
+
+
     public MyPageAdapter(FragmentManager fm) {
         super(fm);
+
 
     }
 

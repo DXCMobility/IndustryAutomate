@@ -9,9 +9,14 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.firebase.client.Firebase;
+
 import java.util.ArrayList;
 import java.util.List;
 
+import Pojo.Industry;
+import Presenter.IClearedDB;
+import config.Endpoint;
 import example.com.industrialautomation.R;
 import models.FactoryDashboard;
 
@@ -23,10 +28,22 @@ public class FactoryDashboardAdapter extends RecyclerView.Adapter<FactoryDashboa
 
     private LinearLayout layoutOne,layoutTwo;
 
+    public IClearedDB iClearedDB;
+
+    ArrayList<Industry> industryList;
+
+    Firebase ref;
+
     List<FactoryDashboard> factoryDashboards;
     public FactoryDashboardAdapter(List<FactoryDashboard> factoryDashboards) {
-                this.factoryDashboards=factoryDashboards;
+        this.factoryDashboards=factoryDashboards;
+        //industryList=lstIndustry;
     }
+
+//    public FactoryDashboardAdapter(ArrayList<Industry> lstIndustry) {
+//        this.factoryDashboards=factoryDashboards;
+//        industryList=lstIndustry;
+//    }
 
     @Override
     public void onAttachedToRecyclerView(RecyclerView recyclerView) {
@@ -38,6 +55,8 @@ public class FactoryDashboardAdapter extends RecyclerView.Adapter<FactoryDashboa
     public FactoryViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.factory_card, parent, false);
         FactoryViewHolder factoryView = new FactoryViewHolder(v);
+        Firebase.setAndroidContext(parent.getContext());
+        ref=new Firebase(Endpoint.FIREBASE_BASE_URL);
         return factoryView;
 
     }
@@ -46,10 +65,43 @@ public class FactoryDashboardAdapter extends RecyclerView.Adapter<FactoryDashboa
     public void onBindViewHolder(final FactoryViewHolder holder, int position) {
         holder.factory.setText(factoryDashboards.get(position).getFactory());
         holder.power_consumption.setText(factoryDashboards.get(position).getPower_consumption());
+
+//        holder.power_consumption.setText(industryList.get(0).getPower_consumption());
+
         holder.temp.setText(factoryDashboards.get(position).getTemp());
+
+//        holder.temp.setText(industryList.get(0).getTemp().getValue());
+
         holder.humidity.setText(factoryDashboards.get(position).getHumidity());
+
+//        holder.humidity.setText(industryList.get(0).getHumidity().getValue());
+
         layoutOne=holder.linearDetail;
         layoutTwo=holder.linearRealDevices;
+//        if(industryList.get(0).getF1_bulbs()[0].getStatus().equals(true)){
+//            holder.image1.setImageResource(R.drawable.light_bulb);
+//        }else{
+//            holder.image1.setImageResource(R.drawable.bulb1);
+//        }
+//
+//        if(industryList.get(0).getAssembly_cooling_fan().getStatus().equals(true)){
+//            holder.image2.setImageResource(R.drawable.assembly_line);
+//        }else{
+//            holder.image2.setImageResource(R.drawable.conveyor_dev);
+//        }
+//
+//        if(industryList.get(0).getGeneric_fan().getStatus().equals(true)){
+//            holder.image3.setImageResource(R.drawable.fan);
+//        }else{e(R.drawable.fannn);
+//        }
+//
+//        if(industryList.get(0).getAssembly_cooling_fan().getStatus().equals(true)){
+//            holder.image4.setImageResource(R.drawable.cooling);
+//        }else{
+//            holder.image4.setImageResource(R.drawable.cooler);
+//        }
+
+
         ArrayList<Integer> images=factoryDashboards.get(position).getImages();
         holder.image1.setImageResource(images.get(0));
         holder.image2.setImageResource(images.get(1));
@@ -57,6 +109,9 @@ public class FactoryDashboardAdapter extends RecyclerView.Adapter<FactoryDashboa
         if(3<images.size()) {
             holder.image4.setImageResource(images.get(3));
         }
+
+
+//            holder.image3.setImageResourc
 
 
 

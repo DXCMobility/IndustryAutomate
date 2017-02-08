@@ -14,6 +14,9 @@ import android.widget.LinearLayout;
 import java.util.ArrayList;
 import java.util.List;
 
+import Pojo.Industry;
+import Presenter.ConnectionTask;
+import Presenter.IClearedDB;
 import adapters.FactoryDashboardAdapter;
 import example.com.industrialautomation.R;
 import models.FactoryDashboard;
@@ -22,7 +25,7 @@ import models.FactoryDashboard;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Dashboard extends Fragment {
+public class Dashboard extends Fragment implements IClearedDB {
 
     private RecyclerView recyclerView;
     private List<FactoryDashboard> factoryDashboards;
@@ -49,9 +52,11 @@ public class Dashboard extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerViewLayoutManager=new GridLayoutManager(getActivity(),2);
         recyclerView.setLayoutManager(recyclerViewLayoutManager);
-        initializeData();
-        FactoryDashboardAdapter factoryDashboardAdapter=new FactoryDashboardAdapter(factoryDashboards);
-        recyclerView.setAdapter(factoryDashboardAdapter);
+        new ConnectionTask(this,this).execute();
+//        initializeData();
+//
+//        FactoryDashboardAdapter factoryDashboardAdapter=new FactoryDashboardAdapter(factoryDashboards);
+//        recyclerView.setAdapter(factoryDashboardAdapter);
 
 
 
@@ -83,5 +88,19 @@ public class Dashboard extends Fragment {
         }
 
 
+    @Override
+    public void AutomatedData(ArrayList<Industry> lstIndustry) {
+        if(lstIndustry !=null && lstIndustry.size() > 0){
+            System.out.println("lsIndustry>>>>>>"+lstIndustry.size());
+            System.out.println("lsIndustry>>>>>&&&>"+lstIndustry);
 
+            initializeData();
+
+            FactoryDashboardAdapter factoryDashboardAdapter=new FactoryDashboardAdapter(factoryDashboards);
+//            FactoryDashboardAdapter factoryDashboardAdapter=new FactoryDashboardAdapter(lstIndustry);
+            recyclerView.setAdapter(factoryDashboardAdapter);
+
+
+        }
+    }
 }

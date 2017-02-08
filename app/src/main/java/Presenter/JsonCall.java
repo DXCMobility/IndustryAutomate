@@ -15,6 +15,7 @@ import Pojo.Generic_fan;
 import Pojo.Humidity;
 import Pojo.Industry;
 import Pojo.Industry2;
+import Pojo.Power_consumption;
 import Pojo.Sound;
 import Pojo.Temp;
 import Pojo.Windmill;
@@ -32,6 +33,7 @@ public class JsonCall {
     private String Const_Generic_fan = "generic_fan";
     private String Const_Humidity = "humidity";
     private String Const_Temp = "temp";
+    private String Const_PowerConsumption = "power_consumption";
     private String Const_F2_bulbs = "f2_bulbs";
     private String Const_Sound = "sound";
     private String Const_Windmill = "windmill";
@@ -112,39 +114,45 @@ public class JsonCall {
 
 
 
+            String str=objIndus.getString(Const_PowerConsumption);
+
+            industry.setPower_consumption(str);
+
+
+
 
                 //===============================================================
 
-                Industry2 industry2 = new Industry2();
-                ////f2_bulbs
-                JSONObject objIndus2 = alSportyDetail.getJSONObject(1);
-                JSONArray jsonArrF2Bul = objIndus2.getJSONArray(Const_F2_bulbs);
-                F2_bulbs[] f2_bulbs = new F2_bulbs[jsonArrF2Bul.length()];
-                for (int f2Bulb = 0; f2Bulb < jsonArrF2Bul.length(); f2Bulb++) {
-                    F2_bulbs objF2_bulbs = new F2_bulbs();
-                    JSONObject objF2Bulb = jsonArrF2Bul.getJSONObject(f2Bulb);
-                    objF2_bulbs.setStatus(objF2Bulb.getString(Const_Status));
-                    objF2_bulbs.setValue(objF2Bulb.getString(Const_Value));
-                    f2_bulbs[f2Bulb] = objF2_bulbs;
-                }
-                industry2.setF2_bulbs(f2_bulbs);
-
-                ///// sound
-                Sound sound= new Sound();
-                JSONObject objSoundJson= objIndus2.getJSONObject(Const_Sound);
-                sound.setStatus(objSoundJson.getString(Const_Status));
-                sound.setValue(objSoundJson.getString(Const_Value));
-                industry2.setSound(sound);
-
-
-                industry.setIndustry2(industry2);
-
-                JSONObject objIndus3 = alSportyDetail.getJSONObject(2);
-                Windmill windmill = new Windmill();
-                JSONObject objwindmill= objIndus3.getJSONObject(Const_Windmill);
-                windmill.setStatus(objwindmill.getString(Const_Status));
-                windmill.setGenerated_power(objwindmill.getString(Const_Generated_power));
-                industry.setWindmill(windmill);
+//                Industry2 industry2 = new Industry2();
+//                ////f2_bulbs
+//                JSONObject objIndus2 = alSportyDetail.getJSONObject(1);
+//                JSONArray jsonArrF2Bul = objIndus2.getJSONArray(Const_F2_bulbs);
+//                F2_bulbs[] f2_bulbs = new F2_bulbs[jsonArrF2Bul.length()];
+//                for (int f2Bulb = 0; f2Bulb < jsonArrF2Bul.length(); f2Bulb++) {
+//                    F2_bulbs objF2_bulbs = new F2_bulbs();
+//                    JSONObject objF2Bulb = jsonArrF2Bul.getJSONObject(f2Bulb);
+//                    objF2_bulbs.setStatus(objF2Bulb.getString(Const_Status));
+//                    objF2_bulbs.setValue(objF2Bulb.getString(Const_Value));
+//                    f2_bulbs[f2Bulb] = objF2_bulbs;
+//                }
+//                industry2.setF2_bulbs(f2_bulbs);
+//
+//                ///// sound
+//                Sound sound= new Sound();
+//                JSONObject objSoundJson= objIndus2.getJSONObject(Const_Sound);
+//                sound.setStatus(objSoundJson.getString(Const_Status));
+//                sound.setValue(objSoundJson.getString(Const_Value));
+//                industry2.setSound(sound);
+//
+//
+//                industry.setIndustry2(industry2);
+//
+//                JSONObject objIndus3 = alSportyDetail.getJSONObject(2);
+//                Windmill windmill = new Windmill();
+//                JSONObject objwindmill= objIndus3.getJSONObject(Const_Windmill);
+//                windmill.setStatus(objwindmill.getString(Const_Status));
+//                windmill.setGenerated_power(objwindmill.getString(Const_Generated_power));
+//                industry.setWindmill(windmill);
 
 
 

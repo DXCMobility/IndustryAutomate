@@ -3,6 +3,7 @@ package Presenter;
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.SystemClock;
+import android.support.v4.app.Fragment;
 
 import org.json.JSONObject;
 
@@ -18,10 +19,10 @@ public class ConnectionTask extends AsyncTask<String, String, String> {
 
     private String resp;
     private String BASE_URL = "https://storesupervisor-836fa.firebaseio.com/industry.json";
-    private Activity cntx;
+    private Fragment cntx;
     private IClearedDB iClearedDB;
-    private ArrayList<Industry> lstIndustry;
-    public ConnectionTask(Activity cntx,IClearedDB iClearedDB)
+    public ArrayList<Industry> lstIndustry;
+    public ConnectionTask(Fragment cntx, IClearedDB iClearedDB)
         {
             this.iClearedDB = iClearedDB;
             this.cntx = cntx;
