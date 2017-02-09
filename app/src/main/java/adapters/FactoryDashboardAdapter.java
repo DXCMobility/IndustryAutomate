@@ -110,6 +110,11 @@ public class FactoryDashboardAdapter extends RecyclerView.Adapter<FactoryDashboa
             holder.image4.setImageResource(images.get(3));
         }
 
+        ArrayList<String> imagesText=factoryDashboards.get(position).getImages_text();
+        holder.textView1.setText(imagesText.get(0));
+        holder.textView2.setText(imagesText.get(1));
+        holder.textView3.setText(imagesText.get(2));
+        holder.textView4.setText(imagesText.get(3));
 
 //            holder.image3.setImageResourc
 
@@ -126,7 +131,7 @@ public class FactoryDashboardAdapter extends RecyclerView.Adapter<FactoryDashboa
 
     public static class FactoryViewHolder extends RecyclerView.ViewHolder {
         CardView cv;
-        TextView status,power_consumption,temp,humidity,factory;
+        TextView status,power_consumption,temp,humidity,factory,textView1,textView2,textView3,textView4;
         ImageView image1,image2,image3,image4;
         LinearLayout linearDetail,linearRealDevices;
 
@@ -141,6 +146,10 @@ public class FactoryDashboardAdapter extends RecyclerView.Adapter<FactoryDashboa
             image2=(ImageView)itemView.findViewById(R.id.image2);
             image3=(ImageView)itemView.findViewById(R.id.image3);
             image4=(ImageView)itemView.findViewById(R.id.image4);
+            textView1=(TextView)itemView.findViewById(R.id.textView1);
+            textView2=(TextView)itemView.findViewById(R.id.textView2);
+            textView3=(TextView)itemView.findViewById(R.id.textView3);
+            textView4=(TextView)itemView.findViewById(R.id.textView4);
         }
     }
 }
