@@ -71,32 +71,47 @@ public class ScreenSlidePageFragment extends Fragment {
 
         barChartInit(factoryValue);
         lineChartInit(factoryValue);
-        pieChartInit();
-        predLineChartInit();
+        pieChartInit(factoryValue);
+        predLineChartInit(factoryValue);
 
         return view;
 
     }
 
-    private void pieChartInit() {
-
+    private void pieChartInit(int factoryValue) {
         ArrayList<Entry> entries = new ArrayList<>();
-                entries.add(new Entry(20, 0));
-                entries.add(new Entry(40, 1));
-                entries.add(new Entry(15, 2));
-                entries.add(new Entry(25, 3));
+        ArrayList<String> labels = new ArrayList<String>();
+
+
+
+        if(factoryValue == 0){
+            entries.add(new Entry(20, 0));
+            entries.add(new Entry(40, 1));
+            entries.add(new Entry(15, 2));
+            entries.add(new Entry(25, 3));
+
+
+            labels.add("Quarter 1");
+            labels.add("Quarter 2");
+            labels.add("Quarter 3");
+            labels.add("Quarter 4");
+
+        }else{
+            entries.add(new Entry(10, 0));
+            entries.add(new Entry(35, 1));
+            entries.add(new Entry(30, 2));
+            entries.add(new Entry(25, 3));
+
+
+            labels.add("Quarter 1");
+            labels.add("Quarter 2");
+            labels.add("Quarter 3");
+            labels.add("Quarter 4");
+        }
 
         PieDataSet dataset = new PieDataSet(entries, "");
-
-        // creating labels<br />
-        ArrayList<String> labels = new ArrayList<String>();
-                labels.add("Quarter 1");
-                labels.add("Quarter 2");
-                labels.add("Quarter 3");
-                labels.add("Quarter 4");
-
-
         PieData data = new PieData(labels, dataset);
+
         pieChart.setUsePercentValues(true);
         pieChart.setData(data);
 
@@ -148,24 +163,40 @@ public class ScreenSlidePageFragment extends Fragment {
     }
 
 
-    private void predLineChartInit() {
-
+    private void predLineChartInit(int factoryValue) {
         ArrayList<Entry> entries = new ArrayList<>();
-        entries.add(new Entry(15f, 0));
-        entries.add(new Entry(10f, 1));
-        entries.add(new Entry(5f, 2));
-        entries.add(new Entry(12f, 3));
-        entries.add(new Entry(30f, 4));
+        ArrayList<String> labels = new ArrayList<String>();
+
+        if(factoryValue == 0){
+            entries.add(new Entry(5f, 0));
+            entries.add(new Entry(15f, 1));
+            entries.add(new Entry(10f, 2));
+            entries.add(new Entry(12f, 3));
+            entries.add(new Entry(30f, 4));
+
+            labels.add("1");
+            labels.add("2");
+            labels.add("3");
+            labels.add("4");
+            labels.add("5");
+
+        }else {
+            entries.add(new Entry(25f, 0));
+            entries.add(new Entry(10f, 1));
+            entries.add(new Entry(15f, 2));
+            entries.add(new Entry(10f, 3));
+            entries.add(new Entry(30f, 4));
+
+            labels.add("1");
+            labels.add("2");
+            labels.add("3");
+            labels.add("4");
+            labels.add("5");
+        }
+
+
 
         LineDataSet dataset = new LineDataSet(entries,"Predictive Analysis");
-        ArrayList<String> labels = new ArrayList<String>();
-        labels.add("1");
-        labels.add("2");
-        labels.add("3");
-        labels.add("4");
-        labels.add("5");
-
-
 
         LineData data = new LineData(labels, dataset);
         predLineChart.setData(data); // set the data and list of lables into chart
@@ -212,7 +243,7 @@ public class ScreenSlidePageFragment extends Fragment {
 
 
 
-        BarDataSet barDataSet1 = new BarDataSet(valueSet1, "AL");
+        BarDataSet barDataSet1 = new BarDataSet(valueSet1, "");
         barDataSet1.setColors(ColorTemplate.COLORFUL_COLORS);
 
         dataSets = new ArrayList<>();
@@ -231,42 +262,7 @@ public class ScreenSlidePageFragment extends Fragment {
         return xAxis;
     }
 
-   /* private ArrayList<BarDataSet> getDataSet(float[] plot1, float[] plot2) {
-        ArrayList<BarDataSet> dataSets = null;
 
-        ArrayList<BarEntry> valueSet1 = new ArrayList<>();
-        for(int i=0;i<plot1.length;i++){
-            valueSet1.add(new BarEntry(plot1[i],i));
-        }
-
-
-        ArrayList<BarEntry> valueSet2 = new ArrayList<>();
-        for(int i=0;i<plot2.length;i++){
-            valueSet2.add(new BarEntry(plot2[i],i));
-        }
-
-
-        BarDataSet barDataSet1 = new BarDataSet(valueSet1, "2015");
-        barDataSet1.setColor(Color.parseColor("#5BC1CD"));
-        BarDataSet barDataSet2 = new BarDataSet(valueSet2, "2016");
-        barDataSet2.setColor(Color.parseColor("#9E1600"));
-
-        dataSets = new ArrayList<>();
-        dataSets.add(barDataSet1);
-        dataSets.add(barDataSet2);
-        return dataSets;
-    }
-
-    private ArrayList<String> getXAxisValues(String[] arrayName) {
-        ArrayList<String> xAxis = new ArrayList<>();
-        for (int i=0;i<arrayName.length;i++){
-            xAxis.add(arrayName[i]);
-        }
-
-
-        return xAxis;
-    }
-*/
 
     }
 

@@ -91,8 +91,6 @@ public class Dashboard extends Fragment implements IClearedDB {
     @Override
     public void AutomatedData(ArrayList<Industry> lstIndustry) {
         if(lstIndustry !=null && lstIndustry.size() > 0){
-            System.out.println("lsIndustry>>>>>>"+lstIndustry.size());
-            System.out.println("lsIndustry>>>>>&&&>"+lstIndustry);
 
             initializeData();
 
