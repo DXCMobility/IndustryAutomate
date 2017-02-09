@@ -222,7 +222,8 @@ public class ScreenSlidePageFragment extends Fragment {
 
         ArrayList<BarEntry> valueSet1 = new ArrayList<>();
         if(factoryValue == 0){
-            BarEntry v1e1 = new BarEntry(110.000f, 0); // Assembly Line
+
+            BarEntry v1e1 = new BarEntry(110.000f,0); // Assembly Line
             valueSet1.add(v1e1);
             BarEntry v1e2 = new BarEntry(40.000f, 1); // Fan
             valueSet1.add(v1e2);
@@ -243,7 +244,7 @@ public class ScreenSlidePageFragment extends Fragment {
 
 
 
-        BarDataSet barDataSet1 = new BarDataSet(valueSet1, "");
+        BarDataSet barDataSet1 = new BarDataSet(valueSet1, "Values in kW");
         barDataSet1.setColors(ColorTemplate.COLORFUL_COLORS);
 
         dataSets = new ArrayList<>();
