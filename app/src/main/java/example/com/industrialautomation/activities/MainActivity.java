@@ -110,8 +110,6 @@ public class MainActivity extends AppCompatActivity implements IClearedDB {
     public void AutomatedData(ArrayList<Industry> lstIndustry) {
 
         if(lstIndustry !=null && lstIndustry.size() > 0){
-            System.out.println("lsIndustry>>>>>>"+lstIndustry.size());
-            System.out.println("lsIndustry>>>>>&&&>"+lstIndustry);
 
 
         }

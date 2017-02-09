@@ -67,21 +67,31 @@ public class Dashboard extends Fragment implements IClearedDB {
         private void initializeData(){
             factoryDashboards = new ArrayList<>();
             ArrayList<Integer> factory1Images=new ArrayList<Integer>();
+            ArrayList<String > factory1ImagesText=new ArrayList<>();
             factory1Images.add(R.drawable.assembly_line);
             factory1Images.add(R.drawable.fan);
             factory1Images.add(R.drawable.light_bulb);
             factory1Images.add(R.drawable.cooling);
+            factory1ImagesText.add("Assembly Line");
+            factory1ImagesText.add("Fan");
+            factory1ImagesText.add("Light Bulb");
+            factory1ImagesText.add("Cooling System");
             ArrayList<Integer> factory2Images=new ArrayList<Integer>();
+            ArrayList<String> factory2ImagesText=new ArrayList<>();
             factory2Images.add(R.drawable.cooling);
             factory2Images.add(R.drawable.alarm);
             factory2Images.add(R.drawable.light_bulb);
             factory2Images.add(R.drawable.assembly_line);
+            factory2ImagesText.add("Cooling System");
+            factory2ImagesText.add("Alarm");
+            factory2ImagesText.add("Light Bulb");
+            factory2ImagesText.add("Assembly Line");
 
 
 
 
-            factoryDashboards.add(new FactoryDashboard("Factory 1", "150", "22","23",factory1Images));
-            factoryDashboards.add(new FactoryDashboard("Factory 2", "100", "22","23",factory2Images));
+            factoryDashboards.add(new FactoryDashboard("Factory 1", "150", "22","23",factory1Images,factory1ImagesText));
+            factoryDashboards.add(new FactoryDashboard("Factory 2", "100", "22","23",factory2Images,factory2ImagesText));
 
 
 
@@ -91,8 +101,6 @@ public class Dashboard extends Fragment implements IClearedDB {
     @Override
     public void AutomatedData(ArrayList<Industry> lstIndustry) {
         if(lstIndustry !=null && lstIndustry.size() > 0){
-            System.out.println("lsIndustry>>>>>>"+lstIndustry.size());
-            System.out.println("lsIndustry>>>>>&&&>"+lstIndustry);
 
             initializeData();
 
