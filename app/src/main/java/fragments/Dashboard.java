@@ -52,11 +52,11 @@ public class Dashboard extends Fragment implements IClearedDB {
         recyclerView.setHasFixedSize(true);
         recyclerViewLayoutManager=new GridLayoutManager(getActivity(),2);
         recyclerView.setLayoutManager(recyclerViewLayoutManager);
-        new ConnectionTask(this,this).execute();
-//        initializeData();
-//
-//        FactoryDashboardAdapter factoryDashboardAdapter=new FactoryDashboardAdapter(factoryDashboards);
-//        recyclerView.setAdapter(factoryDashboardAdapter);
+//        new ConnectionTask(this,this).execute();
+        initializeData();
+
+        FactoryDashboardAdapter factoryDashboardAdapter=new FactoryDashboardAdapter(factoryDashboards);
+        recyclerView.setAdapter(factoryDashboardAdapter);
 
 
 
@@ -74,7 +74,7 @@ public class Dashboard extends Fragment implements IClearedDB {
             factory1Images.add(R.drawable.cooling);
             factory1ImagesText.add("Assembly Line");
             factory1ImagesText.add("Fan");
-            factory1ImagesText.add("Light Bulb");
+            factory1ImagesText.add("Load");
             factory1ImagesText.add("Cooling System");
             ArrayList<Integer> factory2Images=new ArrayList<Integer>();
             ArrayList<String> factory2ImagesText=new ArrayList<>();
@@ -84,7 +84,7 @@ public class Dashboard extends Fragment implements IClearedDB {
             factory2Images.add(R.drawable.assembly_line);
             factory2ImagesText.add("Cooling System");
             factory2ImagesText.add("Alarm");
-            factory2ImagesText.add("Light Bulb");
+            factory2ImagesText.add("Load");
             factory2ImagesText.add("Assembly Line");
 
 
