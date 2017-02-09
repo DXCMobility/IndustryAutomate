@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,19 +39,38 @@ public class ScreenSlidePageFragment extends Fragment {
     PieChart pieChart ;
     LineChart predLineChart ;
     View view;
+    int factoryValue ;
+
+    public static ScreenSlidePageFragment init (int value) {
+        ScreenSlidePageFragment screenSlidePageFragment = new ScreenSlidePageFragment();
+        Bundle args = new Bundle();
+        args.putInt("val", value);
+        screenSlidePageFragment.setArguments(args);
+        return screenSlidePageFragment;
+
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if(getArguments()!= null){
+           factoryValue = getArguments().getInt("val");
+        }
+
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
          view = (ViewGroup) inflater.inflate(R.layout.fragment_screen_slide_page, container, false);
 
-       // chart = (BarChart)view.findViewById(R.id.costChart);
         barChart = (BarChart)view.findViewById(R.id.costChart);
         lineChart = (LineChart)view.findViewById(R.id.lineChart);
         pieChart = (PieChart) view.findViewById(R.id.piChart);
         predLineChart = (LineChart)view.findViewById(R.id.predictAnalysisChart);
 
-        barChartInit();
-        lineChartInit();
+        barChartInit(factoryValue);
+        lineChartInit(factoryValue);
         pieChartInit();
         predLineChartInit();
 
@@ -86,25 +106,39 @@ public class ScreenSlidePageFragment extends Fragment {
 
     }
 
-    private void lineChartInit() {
+    private void lineChartInit(int factoryValue) {
 
         ArrayList<Entry> entries = new ArrayList<>();
-        entries.add(new Entry(4f, 0));
-        entries.add(new Entry(8f, 1));
-        entries.add(new Entry(6f, 2));
-        entries.add(new Entry(2f, 3));
-        entries.add(new Entry(18f, 4));
-
-        LineDataSet dataset = new LineDataSet(entries,"Days in a month");
         ArrayList<String> labels = new ArrayList<String>();
-        labels.add("1");
-        labels.add("2");
-        labels.add("3");
-        labels.add("4");
-        labels.add("5");
-        labels.add("6");
+        if(factoryValue == 0){
+            entries.add(new Entry(4f, 0));
+            entries.add(new Entry(8f, 1));
+            entries.add(new Entry(6f, 2));
+            entries.add(new Entry(2f, 3));
+            entries.add(new Entry(18f, 4));
 
+            labels.add("1");
+            labels.add("2");
+            labels.add("3");
+            labels.add("4");
+            labels.add("5");
 
+        }else {
+
+            entries.add(new Entry(2f, 0));
+            entries.add(new Entry(5f, 1));
+            entries.add(new Entry(15f, 2));
+            entries.add(new Entry(4f, 3));
+            entries.add(new Entry(12f, 4));
+
+            labels.add("1");
+            labels.add("2");
+            labels.add("3");
+            labels.add("4");
+            labels.add("5");
+
+        }
+        LineDataSet dataset = new LineDataSet(entries,"Days in a month");
         LineData data = new LineData(labels, dataset);
         lineChart.setData(data); // set the data and list of lables into chart
         lineChart.setDescription("Machine Downtime");
@@ -141,10 +175,10 @@ public class ScreenSlidePageFragment extends Fragment {
 
     }
 
-    public void barChartInit(){
+    public void barChartInit(int factoryValue){
 
        // String[] xAxisLabels={"Assembly Line","Fan","Load","Cooling System"};
-        BarData data = new BarData(getXAxisValues(), getDataSet());
+        BarData data = new BarData(getXAxisValues(), getDataSet(factoryValue));
         barChart.setData(data);
         barChart.setDescription("Overall Performance");
         barChart.animateXY(2000, 2000);
@@ -152,18 +186,30 @@ public class ScreenSlidePageFragment extends Fragment {
 
     }
 
-    private ArrayList<BarDataSet> getDataSet() {
+    private ArrayList<BarDataSet> getDataSet(int factoryValue) {
         ArrayList<BarDataSet> dataSets = null;
 
         ArrayList<BarEntry> valueSet1 = new ArrayList<>();
-        BarEntry v1e1 = new BarEntry(110.000f, 0); // Assembly Line
-        valueSet1.add(v1e1);
-        BarEntry v1e2 = new BarEntry(40.000f, 1); // Fan
-        valueSet1.add(v1e2);
-        BarEntry v1e3 = new BarEntry(60.000f, 2); // Load
-        valueSet1.add(v1e3);
-        BarEntry v1e4 = new BarEntry(30.000f, 3); // Cooling System
-        valueSet1.add(v1e4);
+        if(factoryValue == 0){
+            BarEntry v1e1 = new BarEntry(110.000f, 0); // Assembly Line
+            valueSet1.add(v1e1);
+            BarEntry v1e2 = new BarEntry(40.000f, 1); // Fan
+            valueSet1.add(v1e2);
+            BarEntry v1e3 = new BarEntry(60.000f, 2); // Load
+            valueSet1.add(v1e3);
+            BarEntry v1e4 = new BarEntry(30.000f, 3); // Cooling System
+            valueSet1.add(v1e4);
+        }else {
+            BarEntry v1e1 = new BarEntry(80.000f, 0); // Assembly Line
+            valueSet1.add(v1e1);
+            BarEntry v1e2 = new BarEntry(40.000f, 1); // Fan
+            valueSet1.add(v1e2);
+            BarEntry v1e3 = new BarEntry(30.000f, 2); // Load
+            valueSet1.add(v1e3);
+            BarEntry v1e4 = new BarEntry(50.000f, 3); // Cooling System
+            valueSet1.add(v1e4);
+        }
+
 
 
         BarDataSet barDataSet1 = new BarDataSet(valueSet1, "AL");
@@ -185,7 +231,7 @@ public class ScreenSlidePageFragment extends Fragment {
         return xAxis;
     }
 
-    private ArrayList<BarDataSet> getDataSet(float[] plot1, float[] plot2) {
+   /* private ArrayList<BarDataSet> getDataSet(float[] plot1, float[] plot2) {
         ArrayList<BarDataSet> dataSets = null;
 
         ArrayList<BarEntry> valueSet1 = new ArrayList<>();
@@ -220,7 +266,7 @@ public class ScreenSlidePageFragment extends Fragment {
 
         return xAxis;
     }
-
+*/
 
     }
 
