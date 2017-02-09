@@ -35,7 +35,7 @@ import example.com.industrialautomation.R;
 public class DeviceStatus extends Fragment implements CompoundButton.OnCheckedChangeListener {
     private RecyclerView recyclerView;
     LinearLayout linearDetail,linearRealDevices;
-    Switch swchAssembly,swchLoads,swchCooling;
+    Switch swchAssembly,swchLoads,swchCooling,swchAlarm,swchLoads_one,swchCooling_one;
 
 
     Firebase ref;
@@ -56,12 +56,21 @@ public class DeviceStatus extends Fragment implements CompoundButton.OnCheckedCh
         swchCooling=(Switch)v.findViewById(R.id.switch_cooling);
         swchLoads=(Switch)v.findViewById(R.id.switch_loads);
 
+        swchAlarm =(Switch) v.findViewById(R.id.switch_alarm);
+        swchLoads_one =(Switch) v.findViewById(R.id.switch_cooling1);
+        swchCooling_one = (Switch) v.findViewById(R.id.switch_load1);
+
+
 
 
 
         swchAssembly.setOnCheckedChangeListener(this);
         swchLoads.setOnCheckedChangeListener(this);
         swchCooling.setOnCheckedChangeListener(this);
+
+        swchAlarm.setOnCheckedChangeListener(this);
+        swchLoads_one.setOnCheckedChangeListener(this);
+        swchCooling_one.setOnCheckedChangeListener(this);
 
 
 
@@ -83,18 +92,24 @@ public class DeviceStatus extends Fragment implements CompoundButton.OnCheckedCh
     public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
         switch (compoundButton.getId()){
             case R.id.switch_assembly:
-                Toast.makeText(getActivity(), ""+b, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getActivity(), ""+b, Toast.LENGTH_SHORT).show();
 //                ToggleAssembly(b);
                 ref.child("assembly_line").child("status").setValue(b);
                 break;
             case R.id.switch_cooling:
-                Toast.makeText(getActivity(), ""+b, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getActivity(), ""+b, Toast.LENGTH_SHORT).show();
                 ref.child("assembly_cooling_fan").child("status").setValue(b);
                 break;
             case R.id.switch_loads:
-                Toast.makeText(getActivity(), ""+b, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getActivity(), ""+b, Toast.LENGTH_SHORT).show();
                 ref.child("generic_fan").child("status").setValue(b);
                 break;
+            case R.id.switch_alarm:
+                ref=new Firebase(Endpoint.FIREBASE_SWITCH_URL_F2);
+//                Toast.makeText(getActivity(), ""+b, Toast.LENGTH_SHORT).show();
+                ref.child("sound").child("status").setValue(b);
+                break;
+
         }
     }
 
