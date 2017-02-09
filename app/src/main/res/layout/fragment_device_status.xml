@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -42,15 +42,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
+                    android:id="@+id/statusCard"
+                    >
 
-                    android:id="@+id/statusCard">
-
-
-
-                <LinearLayout
+                    <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                     android:background="#F4F6F7"
                     android:padding="5dp">
 
                     <Switch
@@ -62,9 +61,11 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+
                         >
 
                         <ImageView
+
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:src="@drawable/conveyor"
@@ -137,13 +138,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:id="@+id/load_card">
+                    android:id="@+id/load_card"
+                    >
 
                     <LinearLayout
                         android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:padding="5dp">
+                        android:padding="5dp"
+                        android:background="#F4F6F7">
 
                         <Switch
                             android:layout_width="match_parent"
@@ -226,13 +229,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:id="@+id/cooling_card">
+                    android:id="@+id/cooling_card"
+                    >
 
                     <LinearLayout
                         android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:padding="5dp">
+                        android:padding="5dp"
+                        android:background="#F4F6F7">
 
                         <Switch
                             android:layout_width="match_parent"
@@ -334,13 +339,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:id="@+id/cooling2_card">
+                    android:id="@+id/cooling2_card"
+                    >
 
                     <LinearLayout
                         android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:padding="5dp">
+                        android:padding="5dp"
+                        android:background="#F4F6F7">
+                        <Switch
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/switch_cooling1"
+                            android:theme="@style/BrandedSwitch"/>
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -417,18 +429,26 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:id="@+id/alarm_card">
+                    android:id="@+id/alarm_card"
+                    >
 
                     <LinearLayout
                         android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:padding="5dp">
+                        android:padding="5dp"
+                        android:background="#F4F6F7">
+                        <Switch
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/switch_alarm"
+                            android:theme="@style/BrandedSwitch"/>
 
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             >
+
 
                             <ImageView
                                 android:layout_width="wrap_content"
@@ -500,13 +520,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:id="@+id/load2_card">
+                    android:id="@+id/load2_card"
+                    >
 
                     <LinearLayout
                         android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:padding="5dp">
+                        android:padding="5dp"
+                        android:background="#F4F6F7">
+                        <Switch
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/switch_load1"
+                            android:theme="@style/BrandedSwitch"/>
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -592,11 +619,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:id="@+id/power_house">
+                android:id="@+id/power_house"
+                >
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="#F4F6F7"
                     >
                     <RelativeLayout
                             android:layout_width="wrap_content"
