@@ -13,6 +13,16 @@ public class FactoryDashboard {
     private String temp;
     private String humidity;
 
+    public ArrayList<String> getImages_text() {
+        return images_text;
+    }
+
+    public void setImages_text(ArrayList<String> images_text) {
+        this.images_text = images_text;
+    }
+
+    private ArrayList<String> images_text;
+
     public ArrayList<Integer> getImages() {
         return images;
     }
@@ -23,12 +33,13 @@ public class FactoryDashboard {
 
     private ArrayList<Integer> images;
 
-    public FactoryDashboard(String factory, String power_consumption, String temp, String humidity, ArrayList<Integer> images) {
+    public FactoryDashboard(String factory, String power_consumption, String temp, String humidity, ArrayList<Integer> images,ArrayList<String> images_text) {
         this.factory=factory;
         this.power_consumption = power_consumption;
         this.temp = temp;
         this.humidity = humidity;
         this.images=images;
+        this.images_text=images_text;
     }
 
     public  String getFactory()
