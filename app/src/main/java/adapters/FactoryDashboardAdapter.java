@@ -5,8 +5,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import com.firebase.client.Firebase;
@@ -32,7 +34,7 @@ public class FactoryDashboardAdapter extends RecyclerView.Adapter<FactoryDashboa
 
     ArrayList<Industry> industryList;
 
-    Firebase ref;
+    Firebase ref,ref_switch;
 
     List<FactoryDashboard> factoryDashboards;
     public FactoryDashboardAdapter(List<FactoryDashboard> factoryDashboards) {
@@ -57,6 +59,7 @@ public class FactoryDashboardAdapter extends RecyclerView.Adapter<FactoryDashboa
         FactoryViewHolder factoryView = new FactoryViewHolder(v);
         Firebase.setAndroidContext(parent.getContext());
         ref=new Firebase(Endpoint.FIREBASE_BASE_URL);
+        ref_switch=new Firebase(Endpoint.FIREBASE_SWITCH_URL);
         return factoryView;
 
     }
@@ -118,6 +121,17 @@ public class FactoryDashboardAdapter extends RecyclerView.Adapter<FactoryDashboa
 
 //            holder.image3.setImageResourc
 
+        holder.factorySwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(true){
+
+                }else{
+
+                }
+            }
+        });
+
 
 
     }
@@ -126,7 +140,7 @@ public class FactoryDashboardAdapter extends RecyclerView.Adapter<FactoryDashboa
 
     @Override
     public int getItemCount() {
-        return factoryDashboards.size();
+            return factoryDashboards.size();
     }
 
     public static class FactoryViewHolder extends RecyclerView.ViewHolder {
@@ -134,11 +148,13 @@ public class FactoryDashboardAdapter extends RecyclerView.Adapter<FactoryDashboa
         TextView status,power_consumption,temp,humidity,factory,textView1,textView2,textView3,textView4;
         ImageView image1,image2,image3,image4;
         LinearLayout linearDetail,linearRealDevices;
+        Switch factorySwitch;
 
         FactoryViewHolder(View itemView) {
             super(itemView);
             cv = (CardView)itemView.findViewById(R.id.factoryCard);
             factory=(TextView)itemView.findViewById(R.id.cardFactory);
+            factorySwitch=(Switch) itemView.findViewById(R.id.switch_factory);
             power_consumption = (TextView)itemView.findViewById(R.id.tvPowerConsumption);
             temp = (TextView)itemView.findViewById(R.id.tvTemp);
             humidity = (TextView)itemView.findViewById(R.id.tvHumidity);

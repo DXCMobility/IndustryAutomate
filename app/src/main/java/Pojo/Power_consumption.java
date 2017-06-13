@@ -8,19 +8,19 @@ import android.os.Parcelable;
  */
 
 public class Power_consumption implements Parcelable {
-    private String status;
+    //private String status;
 
     private String value;
 
-    public String getStatus ()
-    {
-        return status;
-    }
-
-    public void setStatus (String status)
-    {
-        this.status = status;
-    }
+//    public String getStatus ()
+//    {
+//        return status;
+//    }
+//
+//    public void setStatus (String status)
+//    {
+//        this.status = status;
+//    }
 
     public String getValue ()
     {
@@ -32,14 +32,20 @@ public class Power_consumption implements Parcelable {
         this.value = value;
     }
 
+//    @Override
+//    public String toString()
+//    {
+//        return "ClassPojo [status = "+status+", value = "+value+"]";
+//    }
+
+
     @Override
     public String toString()
     {
-        return "ClassPojo [status = "+status+", value = "+value+"]";
+        return "ClassPojo [ value = "+value+"]";
     }
 
     protected Power_consumption(Parcel in) {
-        status = in.readString();
         value = in.readString();
     }
     public Power_consumption(){}
@@ -52,7 +58,7 @@ public class Power_consumption implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(status);
+//        dest.writeString(status);
         dest.writeString(value);
     }
 

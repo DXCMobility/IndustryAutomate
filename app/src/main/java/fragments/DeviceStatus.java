@@ -1,6 +1,8 @@
 package fragments;
 
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -20,6 +22,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -41,6 +44,8 @@ public class DeviceStatus extends Fragment implements CompoundButton.OnCheckedCh
     Firebase ref;
 
     private View v;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
 
     public DeviceStatus() {
         // Required empty public constructor
@@ -60,10 +65,6 @@ public class DeviceStatus extends Fragment implements CompoundButton.OnCheckedCh
         swchLoads_one =(Switch) v.findViewById(R.id.switch_cooling1);
         swchCooling_one = (Switch) v.findViewById(R.id.switch_load1);
 
-
-
-
-
         swchAssembly.setOnCheckedChangeListener(this);
         swchLoads.setOnCheckedChangeListener(this);
         swchCooling.setOnCheckedChangeListener(this);
@@ -72,10 +73,27 @@ public class DeviceStatus extends Fragment implements CompoundButton.OnCheckedCh
         swchLoads_one.setOnCheckedChangeListener(this);
         swchCooling_one.setOnCheckedChangeListener(this);
 
+        sharedPreferences=getActivity().getPreferences(Context.MODE_PRIVATE);
+        editor=sharedPreferences.edit();
+
+        getData();
+
 
 
         return v;
     }
+
+    private void getData() {
+        boolean s=sharedPreferences.getBoolean("assembly_line",true);
+        Firebase.setAndroidContext(getActivity());
+        ref=new Firebase(Endpoint.FIREBASE_SWITCH_URL);
+        swchAssembly.setChecked(s);
+
+
+
+
+    }
+
 
     @Override
     public void onResume() {
@@ -105,7 +123,7 @@ public class DeviceStatus extends Fragment implements CompoundButton.OnCheckedCh
                 ref.child("generic_fan").child("status").setValue(b);
                 break;
             case R.id.switch_alarm:
-                ref=new Firebase(Endpoint.FIREBASE_SWITCH_URL_F2);
+              //  ref=new Firebase(Endpoint.FIREBASE_SWITCH_URL_F2);
 //                Toast.makeText(getActivity(), ""+b, Toast.LENGTH_SHORT).show();
                 ref.child("sound").child("status").setValue(b);
                 break;
